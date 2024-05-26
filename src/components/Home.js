@@ -3,6 +3,7 @@ import {
     LogoContainer
 } from "../styles/HomStyles."
 import { useEffect, useState } from "react"
+import ContentCard from "./ContentCard"
 
 function Home(){
     const [isLoading, setIsLoading] = useState(true)
@@ -13,6 +14,13 @@ function Home(){
         .then(content => setContent(content))
     },[])
 
+    let leftOriented = true
+
+    const contentToDisplay = content.map((content)=>{
+        leftOriented = !leftOriented
+        return (<ContentCard content={content} leftOriented={leftOriented}/>)
+    })
+
     console.log(content)
 
     return(
@@ -20,6 +28,7 @@ function Home(){
             <LogoContainer className={isLoading ? "true" : "false"}>
                 <img src="/saldanas-garage-logo.jpg" alt="logo"/>
             </LogoContainer>
+            {contentToDisplay}
         </HomePage>
     )
 }
