@@ -23,34 +23,53 @@ const slideInRight = keyframes`
 `;
 
 export const CardStyles = styled.div`
-  display:none;
+  display: none;
   width: 20rem;
   background-color: transparent;
   color: white;
   flex-direction: column;
   align-items: center;
-  margin: 20px 0px 20px 0px;
-  padding: 10px 0px 10px 0px ;
+  margin: 20px 0;
+  padding: 10px 0;
 
   &.left.active {
     display: flex;
     margin-right: auto;
-    animation: ${slideInLeft} 2s forwards;
+    animation: ${slideInLeft} 1s forwards;
+
+    h4 {
+      animation: ${slideInLeft} 1100ms 750ms forwards;
+      opacity: 0;
+    }
+
+    p {
+      animation: ${slideInLeft} 1200ms 1250ms forwards;
+      opacity: 0;
+    }
   }
 
   &.right.active {
     display: flex;
     margin-left: auto;
-    animation: ${slideInRight} 2s forwards;
+    animation: ${slideInRight} 1s forwards;
+
+    h4 {
+      animation: ${slideInRight} 1100ms 750ms forwards;
+      opacity: 0;
+    }
+
+    p {
+      animation: ${slideInRight} 1200ms 1250ms forwards;
+      opacity: 0;
+    }
+  }
+
+  h4, p {
+    width: 100%;
   }
 
   &.inactive {
     display: none;
-  }
-
-  h4, p {
-    margin-top: 10px;
-    text-align: center;
   }
 `;
 

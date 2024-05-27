@@ -8,7 +8,7 @@ const bobble = keyframes`
 
 export const HomePage = styled.div`
   overflow-y: scroll;
-  background: linear-gradient(145deg, #303030, #030303);
+  background: linear-gradient(145deg, #030303, #303030);
   width: 100vw;
   height: 100%;
   box-shadow: 
@@ -47,6 +47,7 @@ export const ContentContainer = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
+  height: 2000px;
   gap: 15px;
   margin-top: 22rem;
 `;
