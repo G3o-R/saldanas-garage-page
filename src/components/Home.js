@@ -13,7 +13,7 @@ function Home() {
     const [preloadedIndexes, setPreloadedIndexes] = useState([0]);
 
     useEffect(() => {
-        fetch("http://localhost:3001/content")
+        fetch("https://saldanas-garage-page-json-server.onrender.com/content")
         .then(res => res.json())
         .then(content => {
             setContent(content);
