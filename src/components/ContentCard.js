@@ -1,6 +1,7 @@
 import { 
     CardStyles,
-    ImageContainer
+    ImageContainer,
+    TextContainer
 } from "../styles/ContentCardStyles";
 
 export default function ContentCard({ content, className }) {
@@ -11,8 +12,10 @@ export default function ContentCard({ content, className }) {
             <ImageContainer>
                 <img src={image} alt="car photos" />
             </ImageContainer>
-            <h4>{title}</h4>
-            <p>{text}</p>
+            <TextContainer>
+                <h4>{title}</h4>
+                <p>{text}</p>
+            </TextContainer>
         </CardStyles>
     );
 }

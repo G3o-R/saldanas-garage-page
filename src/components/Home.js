@@ -10,7 +10,7 @@ function Home() {
     const [isLoading, setIsLoading] = useState(true);
     const [content, setContent] = useState([]);
     const [activeIndex, setActiveIndex] = useState(0);
-    const [preloadedIndexes, setPreloadedIndexes] = useState([0]); // Initially preload the first card
+    const [preloadedIndexes, setPreloadedIndexes] = useState([0]);
 
     useEffect(() => {
         fetch("http://localhost:3001/content")
