@@ -1,36 +1,56 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const slideInLeft = keyframes`
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+`;
+
+const slideInRight = keyframes`
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+`;
 
 export const CardStyles = styled.div`
+  display:none;
   width: 20rem;
   background-color: transparent;
   color: white;
-  display: flex;
   flex-direction: column;
   align-items: center;
   margin: 20px 0px 20px 0px;
   padding: 10px 0px 10px 0px ;
 
-  &.left {
+  &.left.active {
+    display: flex;
     margin-right: auto;
-    h4, p {
-    margin-top: 10px;
-    text-align: left;
-    padding-left: 15px;
-  }
+    animation: ${slideInLeft} 2s forwards;
   }
 
-  &.right {
+  &.right.active {
+    display: flex;
     margin-left: auto;
-    h4, p {
-    margin-top: 10px;
-    text-align: right;
-    padding-right: 15px;
+    animation: ${slideInRight} 2s forwards;
   }
+
+  &.inactive {
+    display: none;
   }
 
   h4, p {
-    /* margin: 10px 10px 10px 10px ; */
-    width: 100%;
+    margin-top: 10px;
+    text-align: center;
   }
 `;
 
