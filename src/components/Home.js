@@ -1,15 +1,16 @@
 import { 
+    ContentContainer,
     HomePage,
     LogoContainer
-} from "../styles/HomStyles."
+} from "../styles/HomeStyles."
 import { useEffect, useState } from "react"
 import ContentCard from "./ContentCard"
 
 function Home(){
-    const [isLoading, setIsLoading] = useState(true)
+    const [isLoading, setIsLoading] = useState(false)
     const [content, setContent] = useState([])
     useEffect(()=>{
-        fetch("http://localhost:4000/content")
+        fetch("http://localhost:3001/content")
         .then(res => res.json())
         .then(content => setContent(content))
     },[])
@@ -18,17 +19,17 @@ function Home(){
 
     const contentToDisplay = content.map((content)=>{
         leftOriented = !leftOriented
-        return (<ContentCard content={content} leftOriented={leftOriented}/>)
+        return (<ContentCard key={content.id} content={content} leftOriented={leftOriented}/>)
     })
-
-    console.log(content)
 
     return(
         <HomePage> 
             <LogoContainer className={isLoading ? "true" : "false"}>
                 <img src="/saldanas-garage-logo.jpg" alt="logo"/>
             </LogoContainer>
-            {contentToDisplay}
+            <ContentContainer>
+                {contentToDisplay}
+            </ContentContainer>
         </HomePage>
     )
 }

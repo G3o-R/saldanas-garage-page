@@ -7,9 +7,9 @@ export default function ContentCard({content, leftOriented}){
     const {image, text, title} = content
 
     return(
-        <CardStyles class={leftOriented ? "left" : "right"}>
+        <CardStyles className={leftOriented ? "left" : "right"}>
             <ImageContainer>
-                <img src={image}/>
+                <img src={image} alt="car photos"/>
             </ImageContainer>
             <h4>{title}</h4>
             <p>{text}</p>
