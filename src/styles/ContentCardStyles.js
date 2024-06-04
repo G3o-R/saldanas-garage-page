@@ -24,12 +24,16 @@ const slideInRight = keyframes`
 
 export const CardStyles = styled.div`
   display: none;
+  aspect-ratio: 5/2;
   width: 400px;
-  height: 200px;
   color: white;
   align-items: center;
   margin: 20px 0;
   padding: 10px 0;
+
+  @media screen and (min-width: 650px) {
+    width: 400px;
+  }
 
   &.left.active {
     background: linear-gradient(130deg, #1D1D1D 65%, #4C5157 35%);
@@ -51,7 +55,7 @@ export const CardStyles = styled.div`
   }
 
   &.right.active {
-      background: linear-gradient(130deg, #4C5157 45%,  #1D1D1D 20%);
+    background: linear-gradient(130deg, #4C5157 45%,  #1D1D1D 20%);
 
     display: flex;
     flex-direction: row-reverse;
@@ -71,6 +75,9 @@ export const CardStyles = styled.div`
 
   h4, p {
     width: 100%;
+    @media screen and (min-width: 650px) {
+      font-size: 20px;
+    }
   }
 
   &.inactive {
@@ -81,7 +88,7 @@ export const CardStyles = styled.div`
 export const ImageContainer = styled.div`
   margin-right: 20px;
   width: 100%;
-  height: 200px;
+  height: 100%;
   overflow: hidden;
   position: relative;
   border-radius: 5px;

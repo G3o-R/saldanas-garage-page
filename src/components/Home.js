@@ -3,23 +3,15 @@ import {
     HomePage,
     LogoContainer
 } from "../styles/HomeStyles";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
+import { Context } from "./Context/Context";
 import ContentCard from "./ContentCard";
+import ImageCarousel from "./ImageCarousel";
 
 function Home() {
-    const [isLoading, setIsLoading] = useState(true);
-    const [content, setContent] = useState([]);
     const [activeIndex, setActiveIndex] = useState(0);
     const [preloadedIndexes, setPreloadedIndexes] = useState([0]);
-
-    useEffect(() => {
-        fetch("https://saldanas-garage-page-json-server.onrender.com/content")
-        .then(res => res.json())
-        .then(content => {
-            setContent(content);
-            setIsLoading(false);
-        });
-    }, []);
+    const {isLoading, content, carouselContent} = useContext(Context)
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -70,9 +62,7 @@ function Home() {
 
     return (
         <HomePage> 
-            <LogoContainer className={isLoading ? "true" : "false"}>
-                <img src="/saldanas-garage-logo.jpg" alt="logo" />
-            </LogoContainer>
+            <ImageCarousel carouselContent={carouselContent}/>
             <ContentContainer>
                 {contentToDisplay}
             </ContentContainer>

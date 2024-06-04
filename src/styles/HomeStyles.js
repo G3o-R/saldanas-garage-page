@@ -7,9 +7,8 @@ const bobble = keyframes`
 `;
 
 export const HomePage = styled.div`
-  overflow-y: scroll;
   background: linear-gradient(145deg, #030303, #303030);
-  width: 100vw;
+  width: 100%;
   height: 100%;
   box-shadow: 
     0 0 20px rgba(255, 255, 255, 0.2),
@@ -17,7 +16,6 @@ export const HomePage = styled.div`
     inset 0 0 20px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   color: white;
   font-family: Arial, sans-serif;

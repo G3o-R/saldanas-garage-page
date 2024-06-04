@@ -1,5 +1,6 @@
 {
-    "content": [
+    "page_components": {
+        "cards" : [
         {
             "image":"https://sunbusterstint.com/wp-content/uploads/IMG_6794.jpg",
             "title":"lorem ipsum blah",
@@ -20,5 +21,22 @@
             "title":"lorem ipsum blah",
             "text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
         }
+    ],
+
+        "image_carousel" : [
+            {
+                "image": "https://i.ytimg.com/vi/bCKiX-vZif4/maxresdefault.jpg",
+                "text": "Tints"
+            },
+            {
+                "image": "https://wrapguys.com/wp-content/uploads/2021/07/two-tone-car-wrap.jpg",
+                "text": "Wraps"
+            },
+            {
+                "image": "https://www.whitelawpllc.com/wp-content/uploads/2023/07/Different-types-of-commercial-vehicles-in-a-row-Michigan.jpg",
+                "text": "we do it all"
+            }
     ]
+        
+    }
 }
