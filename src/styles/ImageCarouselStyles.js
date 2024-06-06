@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const CarouselContainer = styled.div`
   position: relative;
-  /* width: 100%; */
+  width: 100%;
   margin: auto;
   overflow: hidden;
   aspect-ratio: 5/3;
@@ -12,13 +12,34 @@ export const CarouselWrapper = styled.div`
   display: flex;
   transition: transform 0.5s ease-in-out;
   transform: ${({ currentIndex }) => `translateX(-${currentIndex * 100}%)`};
+  `;
+
+export const DisplayWrapper = styled.div`
+  aspect-ratio: 5/3;
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
 `;
 
 export const CarouselImage = styled.img`
   flex-shrink: 0;
   width: 100%;
-  /* height:auto; */
+  height: 100%;
   object-fit: cover;
+`;
+
+export const CarouselText = styled.h1`
+  position: absolute;
+  /* bottom: 80px; */
+  left: 20px;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 1;
+  margin: 0;
 `;
 
 export const ArrowButton = styled.button`

@@ -7,6 +7,7 @@ import { useEffect, useState, useContext } from "react";
 import { Context } from "./Context/Context";
 import ContentCard from "./ContentCard";
 import ImageCarousel from "./ImageCarousel";
+import Footer from "./Footer";
 
 function Home() {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -66,6 +67,7 @@ function Home() {
             <ContentContainer>
                 {contentToDisplay}
             </ContentContainer>
+            <Footer />
         </HomePage>
     );
 }
