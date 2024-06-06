@@ -1,4 +1,13 @@
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
+
+const zoomIn = keyframes`
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+`;
 
 export const CarouselContainer = styled.div`
   position: relative;
@@ -12,7 +21,7 @@ export const CarouselWrapper = styled.div`
   display: flex;
   transition: transform 0.5s ease-in-out;
   transform: ${({ currentIndex }) => `translateX(-${currentIndex * 100}%)`};
-  `;
+`;
 
 export const DisplayWrapper = styled.div`
   aspect-ratio: 5/3;
@@ -29,17 +38,32 @@ export const CarouselImage = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
+  &.active {
+    animation: ${zoomIn} 10s ease-in-out forwards;
+  }
+`;
+
+export const ImageOverlay = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  z-index: 1;
 `;
 
 export const CarouselText = styled.h1`
   position: absolute;
-  /* bottom: 80px; */
-  left: 20px;
-  color: white;
-  padding: 10px;
-  border-radius: 5px;
-  z-index: 1;
+  font-size: 40px;
+  color: #F7F7F7;
+  padding-left: 1em;
+  z-index: 2;
   margin: 0;
+
+  @media screen and (min-width: 480px){
+    font-size: 50px;
+}
 `;
 
 export const ArrowButton = styled.button`
@@ -52,7 +76,7 @@ export const ArrowButton = styled.button`
   font-size: 2rem;
   cursor: pointer;
   transform: translateY(-50%);
-  z-index: 1;
+  z-index: 2;
   padding: 5px;
   border-radius: 50%;
   
