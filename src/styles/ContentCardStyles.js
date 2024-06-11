@@ -31,13 +31,14 @@ export const CardStyles = styled.div`
   margin: 20px 0;
   padding: 10px 0;
 
-  @media screen and (min-width: 650px) {
-    width: 400px;
+@media screen and (min-width: 650px){
+    max-width:500px;
+    /* width:100%; */
   }
 
   &.left.active {
     background: linear-gradient(130deg, #1D1D1D 65%, #4C5157 35%);
-
+    /* padding-right:auto; */
     display: flex;
     flex-direction: row;
     margin-right: auto;

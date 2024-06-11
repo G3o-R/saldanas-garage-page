@@ -49,4 +49,12 @@ export const ContentContainer = styled.div`
   height: 1250px;
   gap: 15px;
   margin-top: 4rem;
+
+  @media screen and (min-width: 650px ){
+    width: 650px;
+  }
+`;
+
+export const ReviewsContainer = styled.div`
+
 `;

@@ -14,7 +14,11 @@ export const CarouselContainer = styled.div`
   width: 100%;
   margin: auto;
   overflow: hidden;
-  aspect-ratio: 5/3;
+  aspect-ratio: 4/5;
+
+  @media screen and (min-width: 1600px){
+    aspect-ratio: 8/3;
+  }
 `;
 
 export const CarouselWrapper = styled.div`
@@ -24,13 +28,17 @@ export const CarouselWrapper = styled.div`
 `;
 
 export const DisplayWrapper = styled.div`
-  aspect-ratio: 5/3;
+  aspect-ratio: 4/5;
   position: relative;
   flex-shrink: 0;
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
+
+  @media screen and (min-width: 1600px){
+    aspect-ratio: 8/3;
+  }
 `;
 
 export const CarouselImage = styled.img`

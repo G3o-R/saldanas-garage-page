@@ -1,7 +1,8 @@
 import { 
     ContentContainer,
     HomePage,
-    LogoContainer
+    LogoContainer,
+    ReviewsContainer
 } from "../styles/HomeStyles";
 import { useEffect, useState, useContext } from "react";
 import { Context } from "./Context/Context";
@@ -67,6 +68,9 @@ function Home() {
             <ContentContainer>
                 {contentToDisplay}
             </ContentContainer>
+            <ReviewsContainer>
+                
+            </ReviewsContainer>
             <Footer />
         </HomePage>
     );
