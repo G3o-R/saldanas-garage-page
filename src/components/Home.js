@@ -9,6 +9,8 @@ import { Context } from "./Context/Context";
 import ContentCard from "./ContentCard";
 import ImageCarousel from "./ImageCarousel";
 import Footer from "./Footer";
+import Navbar from "./Navbar";
+import BiographySection from "./BiographySection";
 
 function Home() {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -65,6 +67,8 @@ function Home() {
     return (
         <HomePage> 
             <ImageCarousel carouselContent={carouselContent}/>
+            <Navbar />
+            <BiographySection />
             <ContentContainer>
                 {contentToDisplay}
             </ContentContainer>
