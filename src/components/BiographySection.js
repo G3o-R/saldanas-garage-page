@@ -2,21 +2,21 @@ import {
     BiographyContainer,
     PortraitImageContainer,
     PortraitImage,
-    Biography
+    BiographyWrapper
  } from "../styles/BiographySectionStyles";
 
 
 export default function BiographySection(){
     return (
-        <BiographyContainer>
+        <BiographyContainer className="container-here">
             <PortraitImageContainer>
                 <PortraitImage src="https://thumbs.dreamstime.com/b/young-man-standing-full-length-portrait-white-background-141971362.jpg"
                     alt="portrait image"
                 />
-                <Biography>
-                    No matter what I'll get it done
-                </Biography>
             </PortraitImageContainer>
+                <BiographyWrapper>
+                    <h1>No matter what I'll get it done</h1>
+                </BiographyWrapper>
         </BiographyContainer>
     )
 }

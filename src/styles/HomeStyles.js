@@ -7,7 +7,7 @@ const bobble = keyframes`
 `;
 
 export const HomePage = styled.div`
-  background: linear-gradient(145deg, #030303, #303030);
+  background: linear-gradient(145deg, #4c4c4c, #101010);
   overflow-y:hidden;
   width: 100%;
   height: 100%;

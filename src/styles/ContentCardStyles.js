@@ -25,7 +25,7 @@ const slideInRight = keyframes`
 export const CardStyles = styled.div`
   display: none;
   aspect-ratio: 5/2;
-  max-width: 400px;
+  max-width: 350px;
   color: white;
   align-items: center;
   margin: 20px 0;

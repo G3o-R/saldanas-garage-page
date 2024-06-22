@@ -5,7 +5,7 @@ export const NavbarContainer = styled.div`
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    background-color: #4C5157;
+    background-color: #202020;
     height: 90px;
     margin-bottom: 20px;
 `;

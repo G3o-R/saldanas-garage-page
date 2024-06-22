@@ -72,9 +72,9 @@ function Home() {
             <ContentContainer>
                 {contentToDisplay}
             </ContentContainer>
-            <ReviewsContainer>
+            {/* <ReviewsContainer>
                 
-            </ReviewsContainer>
+            </ReviewsContainer> */}
             <Footer />
         </HomePage>
     );
