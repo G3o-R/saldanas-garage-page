@@ -6,6 +6,9 @@ import {
     SocialsWrapper,
     SocialsIconGrid,
     SocialMediaIconAnchor,
+    ContactInformationContainer,
+    ContactInfo,
+    ContactMethod,
  } from "../styles/FooterStyles";
 
  import { ReactComponent as FacebookIcon } from "../Images/Facebook.svg"
@@ -34,6 +37,14 @@ export default function Footer(){
                     </SocialsIconGrid>
                 </SocialsWrapper>
             </WidgetsContainer>
+            <ContactInformationContainer>
+                <ContactInfo>
+                    Phone: <ContactMethod>603-888-8888</ContactMethod>
+                </ContactInfo>
+                <ContactInfo>
+                    Email: <ContactMethod>LuisSal@gmail.com</ContactMethod>
+                </ContactInfo>
+            </ContactInformationContainer>
         </FooterContainer>
     )
 }
