@@ -46,9 +46,8 @@ export const ContentContainer = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 1250px;
   gap: 15px;
-  margin-top: 4rem;
+  margin: 4rem 0rem 4rem 0rem;
 
   @media screen and (min-width: 650px ){
     width: 650px;

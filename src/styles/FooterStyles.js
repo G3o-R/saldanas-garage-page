@@ -20,7 +20,7 @@ export const WidgetsContainer = styled.div`
 `;
 
 export const FooterLogoWrapper = styled(LogoWrapper)`
-    width: 120px;
+    width: 160px;
     margin: 20px;
 `;
 
@@ -55,6 +55,7 @@ export const SocialMediaIconAnchor = styled.a`
 export const ContactInformationContainer = styled.div`
     display: flex;
     padding: 16px;
+    align-items: center;
     flex-direction: column;
     gap: 12px;
     color: #FFFFFF;
