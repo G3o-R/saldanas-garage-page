@@ -1,40 +1,58 @@
 {
     "page_components": {
         "cards" : [
-        {
-            "image":"https://sunbusterstint.com/wp-content/uploads/IMG_6794.jpg",
-            "title":"lorem ipsum blah",
-            "text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
-        },
-        {
-            "image":"https://tint360az.com/wp-content/uploads/2023/02/Window-Tint-Cost-For-Cars-in-Arizona-1.jpeg",
-            "title":"lorem ipsum blah",
-            "text":"lorem ipsum blah"
-        },
-        {
-            "image":"https://cdn-cgoco.nitrocdn.com/nDJfrGkqiqUTyJFbfYSXHyEBBMKuVKhO/assets/images/optimized/rev-b8e0bf4/bravoprotectionmn.com/wp-content/uploads/2023/05/What-is-the-Best-Window-Tint-for-Cars.webp",
-            "title":"lorem ipsum blah",
-            "text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
-        },
-        {
-            "image":"https://www.audiomotive.com/wp-content/uploads/2015/10/CTC-SOC-AUDIOMOTIVE-BLOG-TINTING.jpg",
-            "title":"lorem ipsum blah",
-            "text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
-        }
+            {
+                "image":"https://sunbusterstint.com/wp-content/uploads/IMG_6794.jpg",
+                "title":"lorem ipsum blah",
+                "text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+            },
+            {
+                "image":"https://tint360az.com/wp-content/uploads/2023/02/Window-Tint-Cost-For-Cars-in-Arizona-1.jpeg",
+                "title":"lorem ipsum blah",
+                "text":"lorem ipsum blah"
+            },
+            {
+                "image":"https://cdn-cgoco.nitrocdn.com/nDJfrGkqiqUTyJFbfYSXHyEBBMKuVKhO/assets/images/optimized/rev-b8e0bf4/bravoprotectionmn.com/wp-content/uploads/2023/05/What-is-the-Best-Window-Tint-for-Cars.webp",
+                "title":"lorem ipsum blah",
+                "text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+            },
+            {
+                "image":"https://www.audiomotive.com/wp-content/uploads/2015/10/CTC-SOC-AUDIOMOTIVE-BLOG-TINTING.jpg",
+                "title":"lorem ipsum blah",
+                "text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+            }
     ],
 
         "image_carousel" : [
             {
-                "image": "https://i.ytimg.com/vi/bCKiX-vZif4/maxresdefault.jpg",
-                "text": "Tints"
+                "image": "/car1.jpg"
             },
             {
-                "image": "https://wrapguys.com/wp-content/uploads/2021/07/two-tone-car-wrap.jpg",
-                "text": "Wraps"
+                "image": "/comercial_work.jpg"
             },
             {
-                "image": "https://www.whitelawpllc.com/wp-content/uploads/2023/07/Different-types-of-commercial-vehicles-in-a-row-Michigan.jpg",
-                "text": "we do it all"
+                "image": "/car2.jpg"
+            },
+            {
+                "image": "/car3.webp"
+            },
+            {
+                "image": "/comercial_work2.jpg"
+            },
+            {
+                "image": "/car4.webp"
+            },
+            {
+                "image": "/car5.jpg"
+            },
+            {
+                "image": "/car6.jpg"
+            },
+            {
+                "image": "/car7.jpg"
+            },
+            {
+                "image": "/car8.jpg"
             }
     ]
         

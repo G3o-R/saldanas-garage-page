@@ -12,21 +12,24 @@ const zoomIn = keyframes`
 export const CarouselContainer = styled.div`
   position: relative;
   width: 100%;
+  height: 240px;
   margin: auto;
-  overflow-x: scroll; /* Enable horizontal scrolling */
+  overflow-x: scroll;
   overflow-y: hidden;
-  white-space: nowrap; /* Prevent line breaks */
+  white-space: nowrap;
 `;
 
 export const CarouselWrapper = styled.div`
   display: flex;
   transition: transform 0.5s ease-in-out;
   width: max-content;
+  height:100%;
 `;
 
 export const DisplayWrapper = styled.div`
   display: inline-block;
   position: relative;
+  aspect-ratio:5/3;
   width: 100%;
   height: auto;
   max-height: 240px;
