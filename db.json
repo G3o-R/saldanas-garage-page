@@ -2,24 +2,24 @@
     "page_components": {
         "cards" : [
             {
-                "image":"https://sunbusterstint.com/wp-content/uploads/IMG_6794.jpg",
-                "title":"lorem ipsum blah",
-                "text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+                "image":"/car6.jpg",
+                "title":"Keeping your car cool...",
+                "text":"With Nano Pro ceramic tinting, blocking nearly 99.9% of UVA and UVB rays"
             },
             {
-                "image":"https://tint360az.com/wp-content/uploads/2023/02/Window-Tint-Cost-For-Cars-in-Arizona-1.jpeg",
-                "title":"lorem ipsum blah",
-                "text":"lorem ipsum blah"
+                "image":"/tinting_work.jpg",
+                "title":"And you looking cooler...",
+                "text":"By transforming your car with our custom wraps"
             },
             {
-                "image":"https://cdn-cgoco.nitrocdn.com/nDJfrGkqiqUTyJFbfYSXHyEBBMKuVKhO/assets/images/optimized/rev-b8e0bf4/bravoprotectionmn.com/wp-content/uploads/2023/05/What-is-the-Best-Window-Tint-for-Cars.webp",
-                "title":"lorem ipsum blah",
-                "text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+                "image":"/comercial_work2.jpg",
+                "title":"Comercial",
+                "text":"I don't know what to say here but I'm figuring it out"
             },
             {
-                "image":"https://www.audiomotive.com/wp-content/uploads/2015/10/CTC-SOC-AUDIOMOTIVE-BLOG-TINTING.jpg",
-                "title":"lorem ipsum blah",
-                "text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+                "image":"/Jose.jpg",
+                "title":"We do it all...",
+                "text":"Trust that in our hands your business, we'll but handled professionally and beyond expectation"
             }
     ],
 
