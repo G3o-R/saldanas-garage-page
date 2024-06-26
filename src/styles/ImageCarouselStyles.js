@@ -1,22 +1,14 @@
 import styled, { keyframes } from 'styled-components';
 
-const zoomIn = keyframes`
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.1);
-  }
-`;
-
 export const CarouselContainer = styled.div`
   position: relative;
   width: 100%;
   height: 240px;
   margin: auto;
-  overflow-x: scroll;
+  overflow-x: hidden;
   overflow-y: hidden;
   white-space: nowrap;
+  cursor: grab;
 `;
 
 export const CarouselWrapper = styled.div`
@@ -40,7 +32,6 @@ export const CarouselImage = styled.img`
   height: 100%;
   max-height: 240px;
   object-fit: cover;
-  animation: ${({ className }) => (className === 'active' ? `${zoomIn} 10s forwards` : 'none')};
 `;
 
 export const ImageOverlay = styled.div`

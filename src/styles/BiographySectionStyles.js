@@ -15,21 +15,28 @@ export const PortraitImageContainer = styled.div`
     align-content:center;
     align-items: center;
     overflow: hidden;
-    width: 13.5em;
+    width: auto;
     height: 100%;
-`;
+    `;
 
 export const PortraitImage = styled.img`
-    height: 100%;
-    object-fit: contain;
+    height: 120%;
+    object-fit: cover;
+    width:auto;
+    aspect-ratio:1/3;
 `;
 
 export const BiographyWrapper = styled.div`
     color: white;
-    width: 400px;
+    width: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 0 2em;
-    text-align: center;
+    text-align: left;
+`;
+
+export const BioText = styled.h1`
+    font-size: 30px;
+
 `;
