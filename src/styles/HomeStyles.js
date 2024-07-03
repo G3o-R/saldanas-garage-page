@@ -1,4 +1,5 @@
 import styled, { keyframes } from "styled-components";
+import backGroundImage from "../Images/grunge-gray-concrete-textured-background.jpg";
 
 const bobble = keyframes`
   0% { transform: translateY(0); }
@@ -7,8 +8,9 @@ const bobble = keyframes`
 `;
 
 export const HomePage = styled.div`
-  background: linear-gradient(145deg, #4c4c4c, #101010);
-  overflow-y:hidden;
+  background-image: url(${backGroundImage}), linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+  background-blend-mode: lighten;
+  overflow-y: hidden;
   width: 100%;
   height: 100%;
   box-shadow: 
@@ -49,8 +51,14 @@ export const ContentContainer = styled.div`
   gap: 15px;
   margin: 4rem 0rem 4rem 0rem;
 
-  @media screen and (min-width: 650px ){
+  @media screen and (min-width: 650px) {
     width: 650px;
+  }
+
+  @media screen {
+    max-width: 950px;
+    /* width:900px; */
+    width:100%;
   }
 `;
 

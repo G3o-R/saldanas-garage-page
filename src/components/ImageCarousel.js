@@ -5,6 +5,7 @@ import {
   DisplayWrapper, 
   CarouselImage, 
   ImageOverlay, 
+  CarouselTextWrapper, 
   CarouselText 
 } from '../styles/ImageCarouselStyles';
 
@@ -32,19 +33,10 @@ export default function ImageCarousel({ carouselContent }) {
       }, 10);
     };
 
-    const stopScrolling = () => {
-      clearInterval(scrollInterval);
-    };
-
-    scrollContainer.addEventListener("touchstart", stopScrolling);
-    scrollContainer.addEventListener("touchend", startScrolling);
-
     startScrolling();
 
     return () => {
-      stopScrolling();
-      scrollContainer.removeEventListener("touchstart", stopScrolling);
-      scrollContainer.removeEventListener("touchend", startScrolling);
+      clearInterval(scrollInterval);
     };
   }, [isDragging]);
 
@@ -55,7 +47,9 @@ export default function ImageCarousel({ carouselContent }) {
   };
 
   const handleMouseLeave = () => {
-    setIsDragging(false);
+    if (isDragging) {
+      setIsDragging(false);
+    }
   };
 
   const handleMouseUp = () => {
@@ -89,25 +83,29 @@ export default function ImageCarousel({ carouselContent }) {
   };
 
   return (
-    <CarouselContainer 
-      ref={scrollContainerRef}
-      onMouseDown={handleMouseDown}
-      onMouseLeave={handleMouseLeave}
-      onMouseUp={handleMouseUp}
-      onMouseMove={handleMouseMove}
-      onTouchStart={handleTouchStart}
-      onTouchMove={handleTouchMove}
-      onTouchEnd={handleTouchEnd}
-    >
-      <CarouselWrapper ref={contentRef}>
-        {carouselContent.concat(carouselContent).map((content, index) => (
-          <DisplayWrapper key={index} className='display-wrapper'>
-            <CarouselImage src={content.image} alt={`carousel-${index}`} />
-            <ImageOverlay className='image-overlay' />
-          </DisplayWrapper>
-        ))}
-      </CarouselWrapper>
-      {/* <CarouselText>testing</CarouselText> */}
-    </CarouselContainer>
+    <div style={{ position: 'relative', width: '100%' }}>
+      <CarouselTextWrapper>
+        <CarouselText>testing</CarouselText>
+      </CarouselTextWrapper>
+      <CarouselContainer
+        ref={scrollContainerRef}
+        onMouseDown={handleMouseDown}
+        onMouseLeave={handleMouseLeave}
+        onMouseUp={handleMouseUp}
+        onMouseMove={handleMouseMove}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+      >
+        <CarouselWrapper ref={contentRef}>
+          {carouselContent.concat(carouselContent).map((content, index) => (
+            <DisplayWrapper key={index} className='display-wrapper'>
+              <CarouselImage src={content.image} alt={`carousel-${index}`} />
+              <ImageOverlay className='image-overlay' />
+            </DisplayWrapper>
+          ))}
+        </CarouselWrapper>
+      </CarouselContainer>
+    </div>
   );
 };

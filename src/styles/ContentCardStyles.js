@@ -1,26 +1,4 @@
-import styled, { keyframes } from "styled-components";
-
-const slideInLeft = keyframes`
-  from {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-`;
-
-const slideInRight = keyframes`
-  from {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-`;
+import styled from "styled-components";
 
 export const CardStyles = styled.div`
   display: none;
@@ -30,48 +8,43 @@ export const CardStyles = styled.div`
   align-items: center;
   margin: 20px 0;
   padding: 10px 0;
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.5);
+
 
 @media screen and (min-width: 650px){
     max-width:500px;
-    /* width:100%; */
   }
+
+@media screen and (min-width:1850px){
+    max-width:700px
+}
 
   &.left.active {
     background: linear-gradient(130deg, #1D1D1D 65%, #4C5157 35%);
-    /* padding-right:auto; */
     display: flex;
     flex-direction: row;
     margin-right: auto;
-    animation: ${slideInLeft} 850ms forwards;
 
-    h4 {
-      animation: ${slideInLeft} 750ms 750ms forwards;
-      opacity: 0;
+    h4, p {
+    width: 100%;
+    @media screen and (min-width: 650px) {
+      font-size: 20px;
     }
-
-    p {
-      animation: ${slideInLeft} 500ms 1000ms forwards;
-      opacity: 0;
-    }
+  }
   }
 
   &.right.active {
     background: linear-gradient(130deg, #4C5157 45%,  #1D1D1D 20%);
-
     display: flex;
     flex-direction: row-reverse;
     margin-left: auto;
-    animation: ${slideInRight} 850ms forwards;
 
-    h4 {
-      animation: ${slideInRight} 750ms 750ms forwards;
-      opacity: 0;
+    h4, p {
+    width: 100%;
+    @media screen and (min-width: 650px) {
+      font-size: 20px;
     }
-
-    p {
-      animation: ${slideInRight} 500ms 1000ms forwards;
-      opacity: 0;
-    }
+  }
   }
 
   h4, p {
@@ -87,7 +60,7 @@ export const CardStyles = styled.div`
 `;
 
 export const ImageContainer = styled.div`
-  margin-right: 20px;
+  margin: 0px 10px 0px 10px;
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -102,7 +75,7 @@ export const ImageContainer = styled.div`
     filter: grayscale(20%);
   }
 
-  &:before {
+  /* &:before {
     content: "";
     position: absolute;
     top: 0;
@@ -110,9 +83,9 @@ export const ImageContainer = styled.div`
     width: 15px;
     height: 15px;
     background: linear-gradient(to top right, transparent 50%, #000 50%);
-  }
+  } */
 
-  &:after {
+  /* &:after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -120,7 +93,7 @@ export const ImageContainer = styled.div`
     width: 15px;
     height: 15px;
     background: linear-gradient(to bottom right, transparent 50%, #000 50%);
-  }
+  } */
 
   &.left:after {
     display: none;
