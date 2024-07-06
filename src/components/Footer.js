@@ -25,13 +25,13 @@ export default function Footer(){
                 </FooterLogoWrapper>
                 <SocialsWrapper>
                     <SocialsIconGrid>
-                        <SocialMediaIconAnchor>
+                        <SocialMediaIconAnchor href="https://www.facebook.com/profile.php?id=100009616453915">
                             <FacebookIcon />
                         </SocialMediaIconAnchor>
-                        <SocialMediaIconAnchor>
+                        <SocialMediaIconAnchor href="https://www.instagram.com/saldanas_garage/">
                             <InstagramIcon />
                         </SocialMediaIconAnchor>
-                        <SocialMediaIconAnchor>
+                        <SocialMediaIconAnchor href="https://www.tiktok.com/@saldana602?lang=en">
                             <TiktokIcon />
                         </SocialMediaIconAnchor>
                     </SocialsIconGrid>

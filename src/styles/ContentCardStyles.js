@@ -19,7 +19,7 @@ export const CardStyles = styled.div`
     max-width:700px
 }
 
-  &.left.active {
+  &.left {
     background: linear-gradient(130deg, #1D1D1D 65%, #4C5157 35%);
     display: flex;
     flex-direction: row;
@@ -33,7 +33,7 @@ export const CardStyles = styled.div`
   }
   }
 
-  &.right.active {
+  &.right {
     background: linear-gradient(130deg, #4C5157 45%,  #1D1D1D 20%);
     display: flex;
     flex-direction: row-reverse;

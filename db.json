@@ -1,22 +1,26 @@
 {
     "page_components": {
         "cards" : [
-            {
+            {   
+                "id": "1",
                 "image":"/car6.jpg",
                 "title":"Keeping your car cool...",
                 "text":"With Nano Pro ceramic tinting, blocking nearly 99.9% of UVA and UVB rays"
             },
             {
+                "id": "2",
                 "image":"/tinting_work.jpg",
                 "title":"And you looking cooler...",
                 "text":"By transforming your car with our custom wraps"
             },
             {
+                "id": "3",
                 "image":"/comercial_work2.jpg",
                 "title":"We do comercial...",
                 "text":"Suit up your company with our proffessional wints and wraps"
             },
             {
+                "id": "4",
                 "image":"/Jose.jpg",
                 "title":"We do it all...",
                 "text":"Trust that in our hands your business, we'll but handled professionally and beyond expectation"
@@ -25,36 +29,104 @@
 
         "image_carousel" : [
             {
+                "id": "1",
                 "image": "/car1.jpg"
             },
             {
+                "id": "2",
                 "image": "/comercial_work.jpg"
             },
             {
+                "id": "3",
                 "image": "/car2.jpg"
             },
             {
+                "id": "4",
                 "image": "/car3.webp"
             },
             {
+                "id": "5",
                 "image": "/comercial_work2.jpg"
             },
             {
+                "id": "6",
                 "image": "/car4.webp"
             },
             {
+                "id": "7",
                 "image": "/car5.jpg"
             },
             {
+                "id": "8",
                 "image": "/car6.jpg"
             },
             {
+                "id": "9",
                 "image": "/car7.jpg"
             },
             {
+                "id": "10",
                 "image": "/car8.jpg"
             }
-    ]
+    ],
+        "reviews":[
+            {
+                "id": "1",
+                "reviewer": "Cory Conklin",
+                "review": "Really nice job! reasonable pricing! The shop is very clean.  Real professional. I’m was very indecisive on how dark I wanted my tint. He was able to give great examples how what the finished product would look like and was genuinely concerned for the way I wanted my tint to look. Finished product looked amazing! Very satisfied! I’m bring my other car in to get tinted too! So Is my dad.",
+                "stars": "5",
+                "review_link":"https://g.co/kgs/gKd7j4S"
+            },
+            {
+                "id": "2",
+                "reviewer": "",
+                "review": "",
+                "stars": "5",
+                "review_link":""
+            },
+            {
+                "id": "3",
+                "reviewer": "",
+                "review": "",
+                "stars": "5",
+                "review_link":""
+            },
+            {
+                "id": "4",
+                "reviewer": "",
+                "review": "",
+                "stars": "5",
+                "review_link":""
+            },
+            {
+                "id": "5",
+                "reviewer": "",
+                "review": "",
+                "stars": "5",
+                "review_link":""
+            },
+            {
+                "id": "6",
+                "reviewer": "",
+                "review": "",
+                "stars": "5",
+                "review_link":""
+            },
+            {
+                "id": "7",
+                "reviewer": "",
+                "review": "",
+                "stars": "5",
+                "review_link":""
+            },
+            {
+                "id": "8",
+                "reviewer": "",
+                "review": "",
+                "stars": "5",
+                "review_link":""
+            }
+        ]
         
     }
 }
