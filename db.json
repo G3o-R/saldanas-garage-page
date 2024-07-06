@@ -17,7 +17,7 @@
                 "id": "3",
                 "image":"/comercial_work2.jpg",
                 "title":"We do comercial...",
-                "text":"Suit up your company with our proffessional wints and wraps"
+                "text":"Suit up your company with our proffessional tints and wraps"
             },
             {
                 "id": "4",
@@ -79,52 +79,59 @@
             },
             {
                 "id": "2",
-                "reviewer": "",
-                "review": "",
+                "reviewer": "IN DA SKYZ",
+                "review": "Saldana completed an amazing job on my F55 Mini Cooper S, fantastic pricing and even got me scheduled in such short notice. [BR] He is incredibly dedicated to his business and ensuring the job is done well and his customers are happy. [BR] I referred my mother, and he came in before his normal hours to squeeze us into his busy schedule. Look forward to doing more business together! May get my vehicle wrapped by him soon as well.  I’ll post pictures of my mother’s vehicle after it’s been returned. [BR] Thank you Saldana!",
                 "stars": "5",
                 "review_link":""
             },
             {
                 "id": "3",
-                "reviewer": "",
-                "review": "",
+                "reviewer": "John Noble",
+                "review": "Found this place through other owners on the Tesla users group.   Luis is super friendly, and knows his tint.   Consulted me on the right type of tint, the ceramic technology is super cool stuff.   I got to the appointment on time, and he got me in and out faster than expected.   Super happy with the high-end materials and workmanship, and the price was really affordable compared to the other quotes.   Five stars all the way.",
                 "stars": "5",
-                "review_link":""
+                "review_link":"https://g.co/kgs/iFD4ZdD"
             },
             {
                 "id": "4",
-                "reviewer": "",
-                "review": "",
+                "reviewer": "PDF",
+                "review": "Small little garage off Indian School Rd. The workmanship was amazing, communicated with us the entire time with texts and pictures. We have had the Ceramic Tint for a week and so far so good. Installation came with a warranty, hopefully we never need it.",
                 "stars": "5",
                 "review_link":""
             },
             {
                 "id": "5",
-                "reviewer": "",
-                "review": "",
+                "reviewer": "Andrew",
+                "review": "Luis is the real deal. Quality EVERY SINGLE TIME. I've had a ton of tint guys over the years and lots of cars and trucks tinted. He is hands down the best pricing and quality for true Ceramic tint in the Valley.  He's quick and efficient with the 3 vehicles I have brought to him just this year. I won't be switching to anyone else anytime soon. Give him a try, you won't regret it!!!",
                 "stars": "5",
-                "review_link":""
+                "review_link":"https://g.co/kgs/X5CyZyz"
             },
             {
                 "id": "6",
-                "reviewer": "",
-                "review": "",
+                "reviewer": "Adam U",
+                "review": "These guys do solid work and the Pro Nano Ceramic tints really work magic in the AZ sun.",
                 "stars": "5",
                 "review_link":""
             },
             {
                 "id": "7",
-                "reviewer": "",
-                "review": "",
+                "reviewer": "Kristian Waugh",
+                "review": "Amazing quality, nice shop, affordable, and nice guys. Definitely come here if you are looking for a nice ceramic tint job.",
                 "stars": "5",
-                "review_link":""
+                "review_link":"https://g.co/kgs/Zhskcxe"
             },
             {
                 "id": "8",
-                "reviewer": "",
-                "review": "",
+                "reviewer": "Benjamin Demarbieux",
+                "review": "Great prices, good quality, great customer service!",
                 "stars": "5",
-                "review_link":""
+                "review_link":"https://g.co/kgs/zD5hwb3"
+            },
+            {
+                "id": "9",
+                "reviewer": "Keyanna Blass",
+                "review": "Great service!",
+                "stars": "5",
+                "review_link":"https://g.co/kgs/ct9XKFr"
             }
         ]
         
