@@ -11,17 +11,21 @@ import ImageCarousel from "./ImageCarousel";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import BiographySection from "./BiographySection";
+import ReviewCard from "./ReviewCard";
 
 function Home() {
-    const {isLoading, content, carouselContent} = useContext(Context)
+    const {isLoading, content, carouselContent, reviewsArray} = useContext(Context)
 
     let leftOriented = true;
 
     const contentToDisplay = content.map((content) => {
         leftOriented = !leftOriented;
-        console.log(content.id)
         return (<ContentCard key={content.id} content={content} className={leftOriented ? "left" : "right" }/>)
     })
+
+    const reviewsToDisplay = reviewsArray.map((review) => (
+        <ReviewCard review={review} key={review.id}/>
+    ))
 
     return (
         <HomePage> 
@@ -31,9 +35,9 @@ function Home() {
             <ContentContainer>
                 {contentToDisplay}
             </ContentContainer>
-            {/* <ReviewsContainer>
-                
-            </ReviewsContainer> */}
+            <ReviewsContainer>
+                {reviewsToDisplay}
+            </ReviewsContainer>
             <Footer />
         </HomePage>
     );

@@ -63,5 +63,23 @@ export const ContentContainer = styled.div`
 `;
 
 export const ReviewsContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  width: 100%;
+  padding: 1rem 0;
+  box-sizing: border-box;
 
+  &::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
 `;
