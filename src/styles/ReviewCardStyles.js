@@ -24,13 +24,9 @@ export const Reviewer = styled.h3`
   text-overflow: ellipsis;
 `;
 
-export const Review = styled.p`
-  font-size: 1em;
-  color: white;
-  flex: 1;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+export const ReviewContainer = styled.p`
+    width: inherit;
+    display: content;
 `;
 
 export const Stars = styled.div`
@@ -42,7 +38,7 @@ export const ReviewLink = styled.a`
   display: block;
   margin-top: 8px;
   font-size: 0.9em;
-  color: silver;
+  color: #007bff;
   text-decoration: none;
 
   &:hover {
