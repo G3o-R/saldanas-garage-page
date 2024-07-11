@@ -63,8 +63,10 @@ export const ContentContainer = styled.div`
 `;
 
 export const ReviewsContainer = styled.div`
+  margin: 4em 0em 4em 0em;
   display: flex;
   flex-direction: row;
+  background-color: #101010;
   overflow-x: auto;
   width: 100%;
   padding: 1rem 0;
