@@ -1,6 +1,9 @@
 import styled from "styled-components";
-// import metalBackgroundImage from "../Images/silver-metallic-background-1920-x-1080-ogibv5l2n8a7vrnh.webp"
-/* background-image: url(${metalBackgroundImage}); */
+
+export const CardWrapper = styled.div`
+  position: relative;
+  margin-top: auto;
+`;
 
 export const Card = styled.div`
   border: 1px solid black;
@@ -9,7 +12,7 @@ export const Card = styled.div`
   margin: 8px;
   width: 300px;
   aspect-ratio: 5 / 3;
-  box-shadow: 4px 4px #242424;
+  box-shadow: 4px 4px #242424;;
   color: white;
   display: flex;
   flex-direction: column;

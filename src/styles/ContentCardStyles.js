@@ -3,7 +3,8 @@ import styled from "styled-components";
 export const CardStyles = styled.div`
   display: none;
   aspect-ratio: 5/2;
-  max-width: 350px;
+  max-width: 420px;
+  width: 100%;
   color: white;
   align-items: center;
   margin: 20px 0;

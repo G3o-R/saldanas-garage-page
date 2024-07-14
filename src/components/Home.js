@@ -2,9 +2,10 @@ import {
     ContentContainer,
     HomePage,
     LogoContainer,
-    ReviewsContainer
+    ReviewsContainer,
+    ReviewsWrapper
 } from "../styles/HomeStyles";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Context } from "./Context/Context";
 import ContentCard from "./ContentCard";
 import ImageCarousel from "./ImageCarousel";
@@ -15,6 +16,8 @@ import ReviewCard from "./ReviewCard";
 
 function Home() {
     const {isLoading, content, carouselContent, reviewsArray} = useContext(Context)
+    const [selectedReview, setSelectedReview] = useState(null)
+    const [selectedReviewPosition, setSelectedReviewPosition] = useState(null);
 
     let leftOriented = true;
 
@@ -23,8 +26,18 @@ function Home() {
         return (<ContentCard key={content.id} content={content} className={leftOriented ? "left" : "right" }/>)
     })
 
+    function handleSetReviewToDisplay(selectedReview, position) {
+        setSelectedReview(selectedReview);
+      }
+
     const reviewsToDisplay = reviewsArray.map((review) => (
-        <ReviewCard review={review} key={review.id}/>
+        <ReviewCard 
+        review={review} 
+        key={review.id} 
+        selectedReview={selectedReview}
+        position={selectedReviewPosition}
+        handleSetReviewToDisplay={handleSetReviewToDisplay}
+        />
     ))
 
     return (
@@ -35,9 +48,11 @@ function Home() {
             <ContentContainer>
                 {contentToDisplay}
             </ContentContainer>
-            <ReviewsContainer>
-                {reviewsToDisplay}
-            </ReviewsContainer>
+            {/* <ReviewsWrapper id="reviews-wrapper"> */}
+                <ReviewsContainer>
+                    {reviewsToDisplay}
+                </ReviewsContainer>
+            {/* </ReviewsWrapper> */}
             <Footer />
         </HomePage>
     );

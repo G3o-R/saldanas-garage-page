@@ -62,13 +62,22 @@ export const ContentContainer = styled.div`
   }
 `;
 
+export const ReviewsWrapper = styled.div`
+  width: 100%;
+  position: relative;
+
+`;
+
 export const ReviewsContainer = styled.div`
   margin: 4em 0em 4em 0em;
   display: flex;
+  gap: 15px;
   flex-direction: row;
-  background-color: #101010;
+  background: linear-gradient(to bottom, transparent 55%, black 50%);
+  overflow: visible;
   overflow-x: auto;
   width: 100%;
+  height:600px;
   padding: 1rem 0;
   box-sizing: border-box;
 
