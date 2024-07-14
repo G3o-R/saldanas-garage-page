@@ -49,12 +49,13 @@ export const Stars = styled.div`
   font-size: 1.2em;
 `;
 
-export const ReviewLink = styled.a`
+export const ReviewLink = styled.p`
   display: block;
   margin-top: 8px;
   font-size: 0.9em;
   color: silver;
   text-decoration: none;
+  cursor: pointer;
 
   &:hover {
     text-decoration: underline;

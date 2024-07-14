@@ -49,7 +49,7 @@ export const ContentContainer = styled.div`
   align-items: center;
   width: 100%;
   gap: 15px;
-  margin: 4rem 0rem 4rem 0rem;
+  margin: 4rem 0rem 0rem 0rem;
 
   @media screen and (min-width: 650px) {
     width: 650px;
@@ -57,27 +57,20 @@ export const ContentContainer = styled.div`
 
   @media screen {
     max-width: 950px;
-    /* width:900px; */
     width:100%;
   }
 `;
 
-export const ReviewsWrapper = styled.div`
-  width: 100%;
-  position: relative;
-
-`;
-
 export const ReviewsContainer = styled.div`
-  margin: 4em 0em 4em 0em;
+  margin: 0em 0em 4em 0em;
   display: flex;
   gap: 15px;
   flex-direction: row;
-  background: linear-gradient(to bottom, transparent 55%, black 50%);
+  background: linear-gradient(to bottom, transparent 60%, black 40%);
   overflow: visible;
   overflow-x: auto;
   width: 100%;
-  height:600px;
+  height:700px;
   padding: 1rem 0;
   box-sizing: border-box;
 

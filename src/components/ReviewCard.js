@@ -1,5 +1,4 @@
 import { useRef } from "react";
-import { createPortal } from "react-dom";
 import { 
   CardWrapper,
   Card,
@@ -22,9 +21,8 @@ export default function ReviewCard({ review, selectedReview, handleSetReviewToDi
   const isSelected = selectedReview === review;
 
   return (
-    <>
     <CardWrapper ref={cardRef}>
-      <Card onClick={handleClick} isSelected={isSelected}>
+      <Card onClick={handleClick}>
         <Reviewer>{review.reviewer}</Reviewer>
         <ReviewContainer>
           <TextTruncate
@@ -35,21 +33,13 @@ export default function ReviewCard({ review, selectedReview, handleSetReviewToDi
             />
         </ReviewContainer>
         <Stars>{"★".repeat(review.stars)}</Stars>
-        <ReviewLink
-          href={review.review_link}
-          target="_blank"
-          rel="noopener noreferrer"
-          >
+        <ReviewLink>
           Read full review
         </ReviewLink>
       </Card>
       {isSelected &&
-        // createPortal(
           <FullReviewDisplay review={review} selectedReviewPosition={selectedReviewPosition} />
-        //   document.getElementById("reviews-wrapper")
-        // )
         }
       </CardWrapper>
-        </>
   );
 }

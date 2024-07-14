@@ -2,16 +2,15 @@ import styled from "styled-components";
 
 export const ReviewDisplay = styled.div`
   position: absolute;
+  background-color: #212930;
+  padding: 16px;
+  margin: 0px 0px 8px 10px;
   bottom: 0;
   left: 0;
-  margin: 0px 0px 5px 10px;
-  width: 300px;  /* Adjust width as necessary */
+  width: 300px;
   min-height: 180px;
-  background-color: #212930;
-  border: 1px solid black;
   box-shadow: 4px 4px #242424;;
   color: white;
-  padding: 16px;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   display: flex;
   flex-direction: column;
@@ -25,12 +24,15 @@ export const Reviewer = styled.h1`
   color: silver;
 `;
 
+export const Header = styled.div`
+
+`;
+
 export const ReviewContainer = styled.div`
   flex-grow: 1;
   overflow-y: auto;
-  margin-top: 16px;
+  margin: 16px 24px 0px 24px;
   p{
-    text-align: left;
     font-size: 1em;
     color: white;
     line-height: 1.5;

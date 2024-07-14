@@ -48,11 +48,9 @@ function Home() {
             <ContentContainer>
                 {contentToDisplay}
             </ContentContainer>
-            {/* <ReviewsWrapper id="reviews-wrapper"> */}
                 <ReviewsContainer>
                     {reviewsToDisplay}
                 </ReviewsContainer>
-            {/* </ReviewsWrapper> */}
             <Footer />
         </HomePage>
     );
