@@ -6,7 +6,8 @@ import {
   CarouselImage, 
   ImageOverlay, 
   CarouselTextWrapper, 
-  CarouselText 
+  CarouselTextContainer, 
+  CarouselText
 } from '../styles/ImageCarouselStyles';
 
 export default function ImageCarousel({ carouselContent }) {
@@ -85,7 +86,11 @@ export default function ImageCarousel({ carouselContent }) {
   return (
     <div style={{ position: 'relative', width: '100%' }}>
       <CarouselTextWrapper>
-        <CarouselText>testing</CarouselText>
+        <CarouselTextContainer>
+          <CarouselText>Tints</CarouselText>
+          <CarouselText>Wraps</CarouselText>
+          <CarouselText>We do it all</CarouselText>
+        </CarouselTextContainer>
       </CarouselTextWrapper>
       <CarouselContainer
         ref={scrollContainerRef}
@@ -101,11 +106,11 @@ export default function ImageCarousel({ carouselContent }) {
           {carouselContent.concat(carouselContent).map((content, index) => (
             <DisplayWrapper key={index} className='display-wrapper'>
               <CarouselImage src={content.image} alt={`carousel-${index}`} />
-              <ImageOverlay className='image-overlay' />
             </DisplayWrapper>
           ))}
         </CarouselWrapper>
       </CarouselContainer>
+          <ImageOverlay className='image-overlay' />
     </div>
   );
 };

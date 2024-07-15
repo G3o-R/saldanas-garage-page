@@ -76,26 +76,6 @@ export const ImageContainer = styled.div`
     filter: grayscale(20%);
   }
 
-  /* &:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 15px;
-    height: 15px;
-    background: linear-gradient(to top right, transparent 50%, #000 50%);
-  } */
-
-  /* &:after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 15px;
-    height: 15px;
-    background: linear-gradient(to bottom right, transparent 50%, #000 50%);
-  } */
-
   &.left:after {
     display: none;
   }
@@ -109,5 +89,6 @@ export const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
+  width: auto;
+  margin: 8px;
 `;
