@@ -1,5 +1,6 @@
 import styled, { keyframes } from "styled-components";
 import backGroundImage from "../Images/grunge-gray-concrete-textured-background.jpg";
+// import backGroundImage from "../Images/vecteezy_free-metal-texture-vector_110348.jpg"
 
 const bobble = keyframes`
   0% { transform: translateY(0); }
@@ -8,7 +9,9 @@ const bobble = keyframes`
 `;
 
 export const HomePage = styled.div`
-  background-image: url(${backGroundImage}), linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+  /* background-color: rgba(0, 0, 128); */
+  background-image: url(${backGroundImage});
+  /* background-repeat: no-repeat; */
   background-blend-mode: lighten;
   overflow-y: hidden;
   width: 100%;
