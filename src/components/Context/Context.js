@@ -9,7 +9,7 @@ function ContextProvider({children}){
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        fetch("https://saldanas-garage-page-json-server.onrender.com/page_components")
+        fetch("http://localhost:3001/page_components")
         .then(res => res.json())
         .then(content => {
             setContent(content.cards);

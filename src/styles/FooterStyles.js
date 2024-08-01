@@ -2,6 +2,9 @@ import styled from "styled-components";
 import { LogoWrapper, Logo } from "./NavbarStyles";
 
 export const FooterContainer = styled.div`
+    position: absolute;
+    bottom: 0;
+    margin-top: 600px;
     width: 100%;
     background-color: #000;
     display: flex;

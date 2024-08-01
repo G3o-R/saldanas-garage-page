@@ -9,6 +9,7 @@ const bobble = keyframes`
 `;
 
 export const HomePage = styled.div`
+  position: relative;
   /* background-color: rgba(0, 0, 128); */
   background-image: url(${backGroundImage});
   /* background-repeat: no-repeat; */
@@ -52,7 +53,7 @@ export const ContentContainer = styled.div`
   align-items: center;
   width: 100%;
   gap: 15px;
-  margin: 4rem 0rem 0rem 0rem;
+  margin: 4rem 0rem 55rem 0rem;
 
   @media screen and (min-width: 650px) {
     width: 650px;
@@ -65,7 +66,10 @@ export const ContentContainer = styled.div`
 `;
 
 export const ReviewsContainer = styled.div`
-  margin: 0em 0em 4em 0em;
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  margin: 0em 0em 27em 0em;
   display: flex;
   gap: 15px;
   flex-direction: row;

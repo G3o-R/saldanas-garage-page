@@ -13,6 +13,7 @@ import Footer from "./Footer";
 import Navbar from "./Navbar";
 import BiographySection from "./BiographySection";
 import ReviewCard from "./ReviewCard";
+import HeroSection from "./HeroSection";
 
 function Home() {
     const {isLoading, content, carouselContent, reviewsArray} = useContext(Context)
@@ -42,8 +43,9 @@ function Home() {
 
     return (
         <HomePage> 
-            <ImageCarousel carouselContent={carouselContent}/>
+            <HeroSection/>
             <Navbar />
+            <ImageCarousel carouselContent={carouselContent}/>
             <BiographySection />
             <ContentContainer>
                 {contentToDisplay}
