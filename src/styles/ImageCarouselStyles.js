@@ -11,7 +11,7 @@ const textTransition = keyframes`
 export const CarouselContainer = styled.div`
   position: relative;
   width: 100%;
-  height: 240px;
+  height: 480px;
   margin: auto;
   overflow: hidden;
   white-space: nowrap;
@@ -30,13 +30,13 @@ export const DisplayWrapper = styled.div`
   aspect-ratio: 5 / 3;
   width: 100%;
   height: auto;
-  max-height: 240px;
+  max-height: 100%;
 `;
 
 export const CarouselImage = styled.img`
   width: 100%;
   height: 100%;
-  max-height: 240px;
+  max-height: 100%;
   object-fit: cover;
 `;
 

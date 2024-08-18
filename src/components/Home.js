@@ -43,9 +43,9 @@ function Home() {
 
     return (
         <HomePage> 
-            <HeroSection/>
-            <Navbar />
+            {/* <HeroSection/> */}
             <ImageCarousel carouselContent={carouselContent}/>
+            <Navbar />
             <BiographySection />
             <ContentContainer>
                 {contentToDisplay}
