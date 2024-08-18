@@ -14,6 +14,7 @@ import Navbar from "./Navbar";
 import BiographySection from "./BiographySection";
 import ReviewCard from "./ReviewCard";
 import HeroSection from "./HeroSection";
+import ContentCardTwo from "./ContentCardTwo";
 
 function Home() {
     const {isLoading, content, carouselContent, reviewsArray} = useContext(Context)
@@ -22,10 +23,12 @@ function Home() {
 
     let leftOriented = true;
 
-    const contentToDisplay = content.map((content) => {
-        leftOriented = !leftOriented;
-        return (<ContentCard key={content.id} content={content} className={leftOriented ? "left" : "right" }/>)
-    })
+    // const contentToDisplay = content.map((content) => {
+    //     leftOriented = !leftOriented;
+    //     return (<ContentCard key={content.id} content={content} className={leftOriented ? "left" : "right" }/>)
+    // })
+
+    const contentToDisplay = content.map((content) => <ContentCardTwo key={content.id} content={content} />)
 
     function handleSetReviewToDisplay(selectedReview, position) {
         setSelectedReview(selectedReview);
