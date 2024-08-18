@@ -54,9 +54,8 @@ export const CarouselTextWrapper = styled.div`
   position: absolute;
   top: 50%;
   left: 10em;
-  /* background-color: red; */
-  transform: translate(-50%, -50%);
-  width: fit-content;
+  transform: translate(-40%, -50%);
+  width: 24em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -67,12 +66,12 @@ export const CarouselTextWrapper = styled.div`
 export const CarouselTextContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* Align text to the top */
+  justify-content: flex-start;
 `;
 
 export const CarouselText = styled.h1`
   /* animation: ${textTransition} 1500ms linear infinite; */
-  font-size: 40px;
+  font-size: 60px;
   font-family: Arial, Helvetica, sans-serif;
   color: #f7f7f7;
   margin: 0;
