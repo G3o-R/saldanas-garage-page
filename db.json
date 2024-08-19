@@ -5,25 +5,29 @@
                 "id": "1",
                 "image":"/car6.jpg",
                 "title":"Keeping your car cool...",
-                "text":"With Nano Pro ceramic tinting, blocking nearly 99.9% of UVA and UVB rays"
+                "text":"With Nano Pro ceramic tinting, blocking nearly 99.9% of UVA and UVB rays",
+                "orientation": "landscape"
             },
             {
                 "id": "2",
                 "image":"/tinting_work.jpg",
                 "title":"And you looking cooler...",
-                "text":"By transforming your car with our custom wraps"
+                "text":"By transforming your car with our custom wraps",
+                "orientation": "portrait"
             },
             {
                 "id": "3",
                 "image":"/comercial_work2.jpg",
                 "title":"We do comercial...",
-                "text":"Suit up your company with our proffessional tints and wraps"
+                "text":"Suit up your company with our proffessional tints and wraps",
+                "orientation": "landscape"
             },
             {
                 "id": "4",
                 "image":"/Jose.jpg",
                 "title":"We do it all...",
-                "text":"Trust that in our hands your business, we'll but handled professionally and beyond expectation"
+                "text":"Trust that in our hands your business will be handled professionally and beyond expectation",
+                "orientation": "portrait"
             }
     ],
 

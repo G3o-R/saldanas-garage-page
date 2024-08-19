@@ -50,7 +50,7 @@ function Home() {
             <ImageCarousel carouselContent={carouselContent}/>
             <Navbar />
             <BiographySection />
-            <ContentContainer>
+            <ContentContainer id="content-column">
                 {contentToDisplay}
             </ContentContainer>
                 <ReviewsContainer>

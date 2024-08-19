@@ -3,27 +3,29 @@ import {
      Imagecontainer,
      ImageWrapper, 
      TextWrapper,
-     TextContainer
+     TextContainer,
+     CardContainer
     } from "../styles/ContentCardTwoStyles";
 
 
 export default function ContentCardTwo({content}){
-    const { image, text, title } = content;
+    const { image, text, title, orientation } = content;
 
-    return(
-        <CardWrapper>
-            <ImageWrapper>
-                <Imagecontainer>
-                    <img src={image} alt="car photos"/>
-                </Imagecontainer>
-            </ImageWrapper>
-            <TextWrapper>
-                <TextContainer>
+    return (
+      <CardWrapper id="card-wrapper">
+        <CardContainer id="card-container">
+          <ImageWrapper id="image-wrapper">
+            <Imagecontainer className={orientation}>
+              <img src={image} alt="car photos" />
+            </Imagecontainer>
+          </ImageWrapper>
+          <TextWrapper>
+            <TextContainer>
                     <h4>{title}</h4>
                     <p>{text}</p>
-                </TextContainer>
-            </TextWrapper>
-
-        </CardWrapper>
-    )
+            </TextContainer>
+          </TextWrapper>
+        </CardContainer>
+      </CardWrapper>
+    );
 }
