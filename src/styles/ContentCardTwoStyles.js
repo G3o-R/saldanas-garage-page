@@ -43,7 +43,7 @@ export const Imagecontainer = styled.div`
         justify-items: space-between;
         height: 14em;
         max-width: 32em;
-        
+
         img {
             width: 100%;
             height: auto;
@@ -60,6 +60,16 @@ export const Imagecontainer = styled.div`
         img {
             height: 100%;
             object-fit: cover;
+        }
+    }
+
+    @media (min-width: 480px) {
+        &.landscape {
+            max-width: 36em;
+            height: 16em;
+        }
+        &.portrait {
+            max-width: 16em;
         }
     }
 `;
@@ -80,7 +90,6 @@ export const TextContainer = styled.div`
     &.landscape {
         justify-content: center;
         height: 14em;
-        /* width: 90%; */
         width: 100%;
         padding: 0em 1em 0em 1em;
         margin: -3em 1.5em 0em 0em;
@@ -95,4 +104,14 @@ export const TextContainer = styled.div`
         margin: 0em 0em 0em -3em;
         align-items: center;
     }
+
+    @media (min-width: 480px) {
+        &.landscape {
+            height: 16em;
+        }
+        &.portrait {
+            /* width: 16em; */
+        }
+    }
+    
 `;
