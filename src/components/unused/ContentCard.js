@@ -2,7 +2,7 @@ import {
     CardStyles,
     ImageContainer,
     TextContainer
-} from "../styles/ContentCardStyles";
+} from "../../styles/ContentCardStyles";
 
 export default function ContentCard({ content, className }) {
     const { image, text, title } = content;

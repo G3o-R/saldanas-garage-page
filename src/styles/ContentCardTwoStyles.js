@@ -86,6 +86,13 @@ export const TextContainer = styled.div`
     color: #fff;
     border-radius: 12px;
     flex-direction: column;
+
+    h4{
+        font-size: 25px;
+    }
+    p{
+        font-size: 18px;
+    }
     
     &.landscape {
         justify-content: center;

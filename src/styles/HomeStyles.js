@@ -14,7 +14,7 @@ export const HomePage = styled.div`
   background-image: url(${backGroundImage});
   /* background-repeat: no-repeat; */
   background-blend-mode: lighten;
-  overflow-y: hidden;
+  overflow-x: hidden;
   width: 100%;
   height: 100%;
   box-shadow: 

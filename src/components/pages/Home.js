@@ -4,17 +4,17 @@ import {
     LogoContainer,
     ReviewsContainer,
     ReviewsWrapper
-} from "../styles/HomeStyles";
+} from "../../styles/HomeStyles";
 import { useContext, useState } from "react";
-import { Context } from "./Context/Context";
-import ContentCard from "./ContentCard";
-import ImageCarousel from "./ImageCarousel";
-import Footer from "./Footer";
-import Navbar from "./Navbar";
-import BiographySection from "./BiographySection";
-import ReviewCard from "./ReviewCard";
-import HeroSection from "./HeroSection";
-import ContentCardTwo from "./ContentCardTwo";
+import { Context } from "../Context/Context";
+// import ContentCard from "./ContentCard";
+import ImageCarousel from "../ImageCarousel";
+import Footer from "../Footer";
+import Navbar from "../Navbar";
+import BiographySection from "../BiographySection";
+import ReviewCard from "../ReviewCard";
+// import HeroSection from "./HeroSection";
+import ContentCardTwo from "../ContentCardTwo";
 
 function Home() {
     const {isLoading, content, carouselContent, reviewsArray} = useContext(Context)
@@ -46,7 +46,6 @@ function Home() {
 
     return (
         <HomePage> 
-            {/* <HeroSection/> */}
             <ImageCarousel carouselContent={carouselContent}/>
             <Navbar />
             <BiographySection />
