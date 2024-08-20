@@ -89,10 +89,14 @@ export const TextContainer = styled.div`
     
     &.landscape {
         justify-content: center;
+        align-items: center;
         height: 14em;
         width: 100%;
         padding: 0em 1em 0em 1em;
         margin: -3em 1.5em 0em 0em;
+        p{
+            width: 18em;
+        }
         
     }
     
