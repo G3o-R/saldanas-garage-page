@@ -4,23 +4,23 @@ const Context = React.createContext()
 
 function ContextProvider({children}){
     const [content, setContent] = useState([]);
-    const [carouselContent, setCarouselContent] = useState([])
+    const [imagesArr, setImagesArr] = useState([])
     const [reviewsArray, setReviewsArray] = useState([])
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        fetch("https://saldanas-garage-page-json-server.onrender.com/page_components")
+        fetch("http://localhost:3001/page_components")
         .then(res => res.json())
         .then(content => {
             setContent(content.cards);
-            setCarouselContent(content.image_carousel)
+            setImagesArr(content.images_arr)
             setReviewsArray(content.reviews)
             setIsLoading(false);
         });
     }, []);
     
 
-    return <Context.Provider value={{ content, isLoading, carouselContent, reviewsArray}}>{children}</Context.Provider>
+    return <Context.Provider value={{ content, isLoading, imagesArr, reviewsArray}}>{children}</Context.Provider>
 }
 
 export {Context, ContextProvider}

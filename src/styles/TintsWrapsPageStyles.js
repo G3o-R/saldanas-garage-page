@@ -7,3 +7,4 @@ export const TintsWrapsStyled = styled.div`
     background-color: #202020;
 
 `
+

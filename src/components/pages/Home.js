@@ -17,7 +17,7 @@ import ReviewCard from "../ReviewCard";
 import ContentCardTwo from "../ContentCardTwo";
 
 function Home() {
-    const {isLoading, content, carouselContent, reviewsArray} = useContext(Context)
+    const {isLoading, content, imagesArr, reviewsArray} = useContext(Context)
     const [selectedReview, setSelectedReview] = useState(null)
     const [selectedReviewPosition, setSelectedReviewPosition] = useState(null);
 
@@ -46,7 +46,7 @@ function Home() {
 
     return (
         <HomePage> 
-            <ImageCarousel carouselContent={carouselContent}/>
+            <ImageCarousel imagesArr={imagesArr}/>
             <Navbar />
             <BiographySection />
             <ContentContainer id="content-column">

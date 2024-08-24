@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router";
 import { 
     AnchorContainer,
     Logo,
@@ -8,13 +9,18 @@ import {
 
 
 export default function Navbar(){
+
+    const navigate = useNavigate()
+    function GoToTintsNWraps(){
+        navigate("/tints-wraps")
+    }
     return(
         <NavbarContainer>
             <LogoWrapper>
                 <Logo src="/saldanas-garage-logo.jpg" alt="company logo" />
             </LogoWrapper>
             <AnchorContainer>
-                <StyledAnchor>About</StyledAnchor>
+                <StyledAnchor onClick={GoToTintsNWraps}>About</StyledAnchor>
                 <StyledAnchor>Reviews</StyledAnchor>
                 <StyledAnchor>Contact Us</StyledAnchor>
             </AnchorContainer>

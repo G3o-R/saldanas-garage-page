@@ -31,7 +31,7 @@
             }
     ],
 
-        "image_carousel" : [
+        "images_arr" : [
             {
                 "id": "1",
                 "image": "/car1.jpg"
