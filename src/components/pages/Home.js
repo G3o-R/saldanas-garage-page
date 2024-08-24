@@ -21,13 +21,6 @@ function Home() {
     const [selectedReview, setSelectedReview] = useState(null)
     const [selectedReviewPosition, setSelectedReviewPosition] = useState(null);
 
-    let leftOriented = true;
-
-    // const contentToDisplay = content.map((content) => {
-    //     leftOriented = !leftOriented;
-    //     return (<ContentCard key={content.id} content={content} className={leftOriented ? "left" : "right" }/>)
-    // })
-
     const contentToDisplay = content.map((content) => <ContentCardTwo key={content.id} content={content} />)
 
     function handleSetReviewToDisplay(selectedReview, position) {

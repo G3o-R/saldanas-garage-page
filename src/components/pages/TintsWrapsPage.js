@@ -1,16 +1,30 @@
+import { useContext, useEffect, useState } from "react";
+import { Context } from "../Context/Context";
 import { 
     TintsWrapsStyled,
 } from "../../styles/TintsWrapsPageStyles";
+import GalleryWave from "../GalleryWave";
 
-const getRangeBetween = (ini, end) => 
-    Array.from({length:end},(v, i)=> i+1).filter( x => x >= ini && x <= end);
+export default function TintsWrapsPage() {
+    const { imagesArr } = useContext(Context);
+    const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
 
-export default function TintsWrapsPage(){
-     
-    
+    useEffect(() => {
+        const handleResize = () => {
+            setViewportWidth(window.innerWidth);
+        };
 
-    return(
+        window.addEventListener("resize", handleResize);
+
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
+
+    return (
         <TintsWrapsStyled>
+            <h1>{viewportWidth}</h1>
+            <GalleryWave imagesArr={imagesArr}/>
         </TintsWrapsStyled>
-    )
+    );
 }

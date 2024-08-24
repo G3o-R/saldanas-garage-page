@@ -5,6 +5,9 @@ export const TintsWrapsStyled = styled.div`
     height: 100%;
     min-height: 100vh;
     background-color: #202020;
+    h1{
+        margin: 0
+    }
 
 `
 
