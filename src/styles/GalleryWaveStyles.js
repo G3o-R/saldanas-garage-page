@@ -6,7 +6,7 @@ export const GalleryWaveContainer = styled.div`
 
 export const GalleryGrid = styled.div`
     display: grid;
-    grid-template-columns: repeat(7, minmax(90px ,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(180px ,1fr));
     gap: 5px;
     
 

@@ -35,7 +35,7 @@ export default function GalleryWave({ imagesArr }) {
         };
     }, []);
 
-    const desiredLength = 4;
+    const desiredLength = 39;
     const extendedImagesArr = extendArrayToLength(imagesArr, desiredLength);
 
     const GalleryWaveDisplay = extendedImagesArr.map((imgObj, index) => {
