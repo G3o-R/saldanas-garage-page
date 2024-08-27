@@ -7,11 +7,8 @@ import { Context } from './Context/Context';
 
 function App() {
   const {isLoading, pageComponents} = useContext(Context)
-  console.log(pageComponents.images_arr)
-  // debugger
 
   if (isLoading){
-    console.log("loading")
     return <div> loading...</div>
   }
 

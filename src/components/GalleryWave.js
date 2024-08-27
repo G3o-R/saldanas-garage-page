@@ -21,18 +21,21 @@ const extendArrayToLength = (array, desiredLength) => {
 };
 
 export default function GalleryWave({ images_arr, viewportWidth }) {
-    // const desiredLength = 24; // 370px - 640px
-    // const desiredLength = 28; //645px -770px
-    // const desiredLength = 32; // 775px - 870px
-    const desiredLength = 36
-
+    const desiredLength = 24; // adjust this as needed
+    const numOfImagesPerRow = desiredLength / 4;
 
     const extendedImagesArr = extendArrayToLength(images_arr, desiredLength);
+// i need to break this down and make sure I understand it
+    const extendedImagesArrWithAnimationIDs = extendedImagesArr.map((imgOBJ, index) => {
+        const rowNumber = Math.floor(index / numOfImagesPerRow);
+        const animation_id = (index % numOfImagesPerRow) + 1 + rowNumber;
+        return { ...imgOBJ, animation_id };
+    });
 
-    const GalleryWaveDisplay = extendedImagesArr.map((imgObj, index) => {
+    const GalleryWaveDisplay = extendedImagesArrWithAnimationIDs.map((imgObj, index) => {
         return (
             <ImgWrapper key={`${imgObj.id}-${index}`}>
-                <ImgContainer>
+                <ImgContainer className={`animation_id-${imgObj.animation_id}`}>
                     <img src={imgObj.image} alt="alt text here" />
                 </ImgContainer>
             </ImgWrapper>
