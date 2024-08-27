@@ -27,9 +27,9 @@ export default function GalleryWave({ images_arr, viewportWidth }) {
     const desiredLength = 36
 
 
-    // const extendedImagesArr = extendArrayToLength(imagesArr, desiredLength);
+    const extendedImagesArr = extendArrayToLength(images_arr, desiredLength);
 
-    const GalleryWaveDisplay = images_arr.map((imgObj, index) => {
+    const GalleryWaveDisplay = extendedImagesArr.map((imgObj, index) => {
         return (
             <ImgWrapper key={`${imgObj.id}-${index}`}>
                 <ImgContainer>
