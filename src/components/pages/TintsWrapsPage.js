@@ -1,12 +1,10 @@
 import { useContext, useEffect, useState } from "react";
-import { Context } from "../Context/Context";
 import { 
     TintsWrapsStyled,
 } from "../../styles/TintsWrapsPageStyles";
 import GalleryWave from "../GalleryWave";
 
-export default function TintsWrapsPage() {
-    const { imagesArr } = useContext(Context);
+export default function TintsWrapsPage({images_arr}) {
     const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
 
     useEffect(() => {
@@ -23,8 +21,8 @@ export default function TintsWrapsPage() {
 
     return (
         <TintsWrapsStyled>
+            <GalleryWave images_arr={images_arr} viewportWidth={viewportWidth}/>
             <h1>{viewportWidth}</h1>
-            <GalleryWave imagesArr={imagesArr}/>
         </TintsWrapsStyled>
     );
 }

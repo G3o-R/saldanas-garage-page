@@ -20,25 +20,16 @@ const extendArrayToLength = (array, desiredLength) => {
     return extendedArray;
 };
 
-export default function GalleryWave({ imagesArr }) {
-    const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
+export default function GalleryWave({ images_arr, viewportWidth }) {
+    // const desiredLength = 24; // 370px - 640px
+    // const desiredLength = 28; //645px -770px
+    // const desiredLength = 32; // 775px - 870px
+    const desiredLength = 36
 
-    useEffect(() => {
-        const handleResize = () => {
-            setViewportWidth(window.innerWidth);
-        };
 
-        window.addEventListener("resize", handleResize);
+    // const extendedImagesArr = extendArrayToLength(imagesArr, desiredLength);
 
-        return () => {
-            window.removeEventListener("resize", handleResize);
-        };
-    }, []);
-
-    const desiredLength = 39;
-    const extendedImagesArr = extendArrayToLength(imagesArr, desiredLength);
-
-    const GalleryWaveDisplay = extendedImagesArr.map((imgObj, index) => {
+    const GalleryWaveDisplay = images_arr.map((imgObj, index) => {
         return (
             <ImgWrapper key={`${imgObj.id}-${index}`}>
                 <ImgContainer>

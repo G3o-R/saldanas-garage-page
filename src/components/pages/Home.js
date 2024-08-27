@@ -5,8 +5,7 @@ import {
     ReviewsContainer,
     ReviewsWrapper
 } from "../../styles/HomeStyles";
-import { useContext, useState } from "react";
-import { Context } from "../Context/Context";
+import { useState } from "react";
 // import ContentCard from "./ContentCard";
 import ImageCarousel from "../ImageCarousel";
 import Footer from "../Footer";
@@ -16,18 +15,18 @@ import ReviewCard from "../ReviewCard";
 // import HeroSection from "./HeroSection";
 import ContentCardTwo from "../ContentCardTwo";
 
-function Home() {
-    const {isLoading, content, imagesArr, reviewsArray} = useContext(Context)
+function Home({pageComponents}) {
+    const {cards, images_arr, reviews } = pageComponents
     const [selectedReview, setSelectedReview] = useState(null)
     const [selectedReviewPosition, setSelectedReviewPosition] = useState(null);
 
-    const contentToDisplay = content.map((content) => <ContentCardTwo key={content.id} content={content} />)
+    const contentToDisplay = cards.map((content) => <ContentCardTwo key={content.id} content={content} />)
 
     function handleSetReviewToDisplay(selectedReview, position) {
         setSelectedReview(selectedReview);
       }
 
-    const reviewsToDisplay = reviewsArray.map((review) => (
+    const reviewsToDisplay = reviews.map((review) => (
         <ReviewCard 
         review={review} 
         key={review.id} 
@@ -39,7 +38,7 @@ function Home() {
 
     return (
         <HomePage> 
-            <ImageCarousel imagesArr={imagesArr}/>
+            <ImageCarousel images_arr={images_arr}/>
             <Navbar />
             <BiographySection />
             <ContentContainer id="content-column">

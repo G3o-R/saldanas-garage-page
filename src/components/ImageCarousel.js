@@ -10,7 +10,7 @@ import {
   CarouselText
 } from '../styles/ImageCarouselStyles';
 
-export default function ImageCarousel({ imagesArr }) {
+export default function ImageCarousel({ images_arr }) {
   const scrollContainerRef = useRef(null);
   const contentRef = useRef(null);
   const [isDragging, setIsDragging] = useState(false);
@@ -103,7 +103,7 @@ export default function ImageCarousel({ imagesArr }) {
         onTouchEnd={handleTouchEnd}
       >
         <CarouselWrapper ref={contentRef}>
-          {imagesArr.concat(imagesArr).map((content, index) => (
+          {images_arr.concat(images_arr).map((content, index) => (
             <DisplayWrapper key={index} className='display-wrapper'>
               <CarouselImage src={content.image} alt={`carousel-${index}`} />
             </DisplayWrapper>
