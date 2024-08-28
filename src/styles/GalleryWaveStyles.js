@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const GalleryWaveContainer = styled.div`
 
+
 `;
 
 export const GalleryGrid = styled.div`
@@ -12,6 +13,7 @@ export const GalleryGrid = styled.div`
 
 export const ImgWrapper = styled.div`
     display: contents;
+    
     /* max-width: 120px; */
     `;
 
@@ -23,4 +25,14 @@ export const ImgContainer = styled.div`
     img{
         width: 100%;
     }
+
+    &.active{
+        img{
+            transform: scale(1.1)
+        }
+    }
+
+    /* &.animation_id-14{
+            width: 120%;
+    } */
 `;

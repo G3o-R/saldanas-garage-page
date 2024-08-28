@@ -45,6 +45,43 @@ export default function GalleryWave({ images_arr, viewportWidth }) {
         const animation_id = (index % numOfImagesPerRow) + 1 + rowNumber;
         return { ...imgOBJ, animation_id };
     });
+
+    // const animateImages = () => {
+    //     let currentAnimationID = 1;
+    //     const maxAnimationID = numOfImagesPerRow + 4;
+    
+    //     const runAnimation = () => {
+    //         const interval = setInterval(() => {
+    //             // Remove .active class from all elements
+    //             document.querySelectorAll('.active').forEach(el => el.classList.remove('active'));
+    
+    //             // Select elements with the current animation_id
+    //             const selectedImgs = document.querySelectorAll(`.animation_id-${currentAnimationID}`);
+    
+    //             // Add .active class to the selected elements
+    //             selectedImgs.forEach(el => el.classList.add('active'));
+    
+    //             // Move to the next animation_id
+    //             currentAnimationID++;
+    
+    //             // Reset to 1 after reaching maxAnimationID
+    //             if (currentAnimationID > maxAnimationID) {
+    //                 clearInterval(interval); // Stop the current interval
+    //                 currentAnimationID = 1;
+    
+    //                 // Start the animation again after 5 seconds
+    //                 setTimeout(runAnimation, 3000);
+    //             }
+    //         }, 250); // Adjust this interval for timing between animation steps
+    //     };
+    
+    //     runAnimation();
+    // };
+    
+    // useEffect(() => {
+    //     animateImages();
+    // }, [numOfImagesPerRow]);
+    
     
     const GalleryWaveDisplay = extendedImagesArrWithAnimationIDs.map((imgObj, index) => {
         return (
