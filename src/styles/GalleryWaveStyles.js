@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const GalleryWaveContainer = styled.div`
-
-
+    overflow-y: hidden;
+    position: relative;
 `;
 
 export const GalleryGrid = styled.div`
@@ -12,27 +12,71 @@ export const GalleryGrid = styled.div`
 `;
 
 export const ImgWrapper = styled.div`
+    position: relative;
     display: contents;
-    
-    /* max-width: 120px; */
-    `;
+`;
 
 export const ImgContainer = styled.div`
     object-fit: cover;
     aspect-ratio: 1/1;
     overflow: hidden;
+    position: relative;
 
-    img{
+    img {
         width: 100%;
+        transition: transform 0.5s ease, filter 0.5s ease;
     }
 
-    &.active{
-        img{
-            transform: scale(1.1)
+    &.active {
+        img {
+            transform: scale(1.1);
+            filter: brightness(0.7); /* Apply darker tint */
+        }
+
+        /* Add an overlay for the darker tint effect */
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3); /* Darker overlay */
+            pointer-events: none;
         }
     }
+`;
 
-    /* &.animation_id-14{
-            width: 120%;
-    } */
+export const HeaderContainer = styled.div`
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 30px;
+    /* background: linear-gradient(
+        to top left, 
+        rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0.0)
+    ); */
+`;
+
+
+export const StyledHeader = styled.h1`
+    font-size: 4rem;
+    font-weight: 500;
+    color: #FFFFFF;
+
+`;
+
+export const ShadowOverlay = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+        to top left, 
+        rgba(0, 0, 0, 0.6) 10%,  /* Darker in the bottom-right corner */
+        rgba(0, 0, 0, 0.2) 40%,  /* Rapid transition to lighter */
+        rgba(0, 0, 0, 0.0) 100%  /* Fully transparent in the top-left corner */
+    );
 `;

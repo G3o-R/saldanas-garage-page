@@ -1,4 +1,4 @@
-import { GalleryGrid, GalleryWaveContainer, ImgContainer, ImgWrapper } from "../styles/GalleryWaveStyles";
+import { GalleryGrid, GalleryWaveContainer, HeaderContainer, ImgContainer, ImgWrapper, ShadowOverlay, StyledHeader } from "../styles/GalleryWaveStyles";
 import { useState, useEffect } from "react";
 
 const extendArrayToLength = (array, desiredLength) => {
@@ -20,17 +20,17 @@ const extendArrayToLength = (array, desiredLength) => {
     return extendedArray;
 };
 
-export default function GalleryWave({ images_arr, viewportWidth }) {
+export default function GalleryWave({ images_arr, viewportWidth, text = "Add Text"}) {
     let numOfImagesPerRow;
     
     if (viewportWidth <= 500){
-        numOfImagesPerRow = 6;
-    } else if (viewportWidth > 500 && viewportWidth <= 900){
-        numOfImagesPerRow = 7;
-    } else if( viewportWidth > 900 && viewportWidth <= 1080){
         numOfImagesPerRow = 8;
-    } else if ( viewportWidth > 1080 && viewportWidth <= 1450){
+    } else if (viewportWidth > 500 && viewportWidth <= 900){
         numOfImagesPerRow = 9;
+    } else if( viewportWidth > 900 && viewportWidth <= 1080){
+        numOfImagesPerRow = 10;
+    } else if ( viewportWidth > 1080 && viewportWidth <= 1450){
+        numOfImagesPerRow = 11;
     } else if (viewportWidth > 1450 && viewportWidth <= 2560){
         numOfImagesPerRow = 12;
     } else {
@@ -46,41 +46,41 @@ export default function GalleryWave({ images_arr, viewportWidth }) {
         return { ...imgOBJ, animation_id };
     });
 
-    // const animateImages = () => {
-    //     let currentAnimationID = 1;
-    //     const maxAnimationID = numOfImagesPerRow + 4;
+    const animateImages = () => {
+        let currentAnimationID = 1;
+        const maxAnimationID = numOfImagesPerRow + 4;
     
-    //     const runAnimation = () => {
-    //         const interval = setInterval(() => {
-    //             // Remove .active class from all elements
-    //             document.querySelectorAll('.active').forEach(el => el.classList.remove('active'));
+        const runAnimation = () => {
+            const interval = setInterval(() => {
+                // Remove .active class from all elements
+                document.querySelectorAll('.active').forEach(el => el.classList.remove('active'));
     
-    //             // Select elements with the current animation_id
-    //             const selectedImgs = document.querySelectorAll(`.animation_id-${currentAnimationID}`);
+                // Select elements with the current animation_id
+                const selectedImgs = document.querySelectorAll(`.animation_id-${currentAnimationID}`);
     
-    //             // Add .active class to the selected elements
-    //             selectedImgs.forEach(el => el.classList.add('active'));
+                // Add .active class to the selected elements
+                selectedImgs.forEach(el => el.classList.add('active'));
     
-    //             // Move to the next animation_id
-    //             currentAnimationID++;
+                // Move to the next animation_id
+                currentAnimationID++;
     
-    //             // Reset to 1 after reaching maxAnimationID
-    //             if (currentAnimationID > maxAnimationID) {
-    //                 clearInterval(interval); // Stop the current interval
-    //                 currentAnimationID = 1;
+                // Reset to 1 after reaching maxAnimationID
+                if (currentAnimationID > maxAnimationID) {
+                    clearInterval(interval); // Stop the current interval
+                    currentAnimationID = 1;
     
-    //                 // Start the animation again after 5 seconds
-    //                 setTimeout(runAnimation, 3000);
-    //             }
-    //         }, 250); // Adjust this interval for timing between animation steps
-    //     };
+                    // Start the animation again after 5 seconds
+                    setTimeout(runAnimation, 3000);
+                }
+            }, 250); // Adjust this interval for timing between animation steps
+        };
     
-    //     runAnimation();
-    // };
+        runAnimation();
+    };
     
-    // useEffect(() => {
-    //     animateImages();
-    // }, [numOfImagesPerRow]);
+    useEffect(() => {
+        animateImages();
+    }, []);
     
     
     const GalleryWaveDisplay = extendedImagesArrWithAnimationIDs.map((imgObj, index) => {
@@ -98,7 +98,10 @@ export default function GalleryWave({ images_arr, viewportWidth }) {
             <GalleryGrid numofimagesperrow={numOfImagesPerRow}>
                 {GalleryWaveDisplay}
             </GalleryGrid>
-                {numOfImagesPerRow}
+            <ShadowOverlay />
+            <HeaderContainer>
+                <StyledHeader>{text}</StyledHeader>
+            </HeaderContainer>
         </GalleryWaveContainer>
     );
 }
