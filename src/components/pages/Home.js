@@ -31,7 +31,8 @@ function Home({pageComponents}) {
         review={review} 
         key={review.id} 
         selectedReview={selectedReview}
-        position={selectedReviewPosition}
+        setSelectedReview={setSelectedReview}
+        selectedReviewPosition={selectedReviewPosition}
         handleSetReviewToDisplay={handleSetReviewToDisplay}
         />
     ))
