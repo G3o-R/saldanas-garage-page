@@ -4,12 +4,15 @@ import Home from './pages/Home';
 import TintsWrapsPage from './pages/TintsWrapsPage';
 import { useContext } from 'react';
 import { Context } from './Context/Context';
+import LoadingPage from './LoadingPage';
 
 function App() {
   const {isLoading, pageComponents} = useContext(Context)
 
   if (isLoading){
-    return <div> loading...</div>
+    return (
+        <LoadingPage />
+    )
   }
 
   return (

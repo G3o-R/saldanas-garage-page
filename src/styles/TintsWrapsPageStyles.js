@@ -11,7 +11,7 @@ export const TintsWrapsStyled = styled.div`
 `
 
 export const InfoSection = styled.section`
-    
+
 
 `;
 

@@ -51,12 +51,6 @@ export const HeaderContainer = styled.div`
     position: absolute;
     bottom: 0;
     right: 0;
-    padding: 30px;
-    /* background: linear-gradient(
-        to top left, 
-        rgba(0, 0, 0, 0.8),
-        rgba(0, 0, 0, 0.0)
-    ); */
 `;
 
 
@@ -64,6 +58,7 @@ export const StyledHeader = styled.h1`
     font-size: 4rem;
     font-weight: 500;
     color: #FFFFFF;
+    margin: 5px;
 
 `;
 
