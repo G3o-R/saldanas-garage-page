@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const GalleryWaveContainer = styled.div`
     overflow-y: hidden;
     position: relative;
+    /* border: 10px #212930 solid; */
 `;
 
 export const GalleryGrid = styled.div`
@@ -50,7 +51,7 @@ export const ImgContainer = styled.div`
 export const HeaderContainer = styled.div`
     position: absolute;
     bottom: 0;
-    right: 0;
+    left: 0;
 `;
 
 
@@ -58,7 +59,8 @@ export const StyledHeader = styled.h1`
     font-size: 4rem;
     font-weight: 500;
     color: #FFFFFF;
-    margin: 5px;
+    margin: 15px;
+    text-decoration: underline;
 
 `;
 
@@ -69,7 +71,7 @@ export const ShadowOverlay = styled.div`
   width: 100%;
   height: 100%;
   background: linear-gradient(
-        to top left, 
+        to top right, 
         rgba(0, 0, 0, 0.6) 10%,  /* Darker in the bottom-right corner */
         rgba(0, 0, 0, 0.2) 40%,  /* Rapid transition to lighter */
         rgba(0, 0, 0, 0.0) 100%  /* Fully transparent in the top-left corner */

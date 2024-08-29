@@ -20,7 +20,7 @@ const extendArrayToLength = (array, desiredLength) => {
     return extendedArray;
 };
 
-export default function GalleryWave({ images_arr, viewportWidth, text = "Add Text"}) {
+export default function GalleryWave({ images_arr, viewportWidth}) {
     let numOfImagesPerRow;
     
     if (viewportWidth <= 500){
@@ -95,9 +95,8 @@ export default function GalleryWave({ images_arr, viewportWidth, text = "Add Tex
             <GalleryGrid numofimagesperrow={`${numOfImagesPerRow}`}>
                 {GalleryWaveDisplay}
             </GalleryGrid>
-            <ShadowOverlay />
+            {/* <ShadowOverlay /> */}
             <HeaderContainer>
-                <StyledHeader>{text}</StyledHeader>
             </HeaderContainer>
         </GalleryWaveContainer>
     );

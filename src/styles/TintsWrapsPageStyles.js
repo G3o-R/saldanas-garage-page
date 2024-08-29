@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import backGroundImage from "../Images/grunge-gray-concrete-textured-background.jpg";
+
 
 export const TintsWrapsStyled = styled.div`
     display: flex;
@@ -7,7 +9,8 @@ export const TintsWrapsStyled = styled.div`
     width: 100%;
     height: 100%;
     min-height: 100vh;
-    background-color: #202020;
+    background-image: url(${backGroundImage});
+    background-blend-mode: lighten;
 `
 
 export const InfoSection = styled.section`
@@ -22,14 +25,30 @@ export const InfoWrapper = styled.div`
 `;
 
 export const InfoContainer = styled.div`
+    width: fit-content;
+    margin: 1em 1.5em 2.5em 1.5em;
+
+`;
+
+export const TitleCardContainer = styled.div`
+    width: 100%;
+    text-align: left;
+
+    h1{
+        text-decoration: underline;
+        font-size: 70px;
+        margin: 0;
+
+    }
+`;
+
+export const TextBox = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
-    margin: 1em .5em .5em .5em;
     background-color: #212930;
     box-shadow: 8px 8px #000000;;
-    border-radius: 24px 24px 24px 24px;
 
     p{
         color: #FFFFFF;
@@ -37,4 +56,4 @@ export const InfoContainer = styled.div`
         margin: 1em;
 
     }
-`;
+`
