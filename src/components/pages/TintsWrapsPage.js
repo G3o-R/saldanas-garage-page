@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { 
     InfoContainer,
     InfoSection,
+    GalleryWaveWrapper,
     InfoWrapper,
     TintsWrapsStyled,
     TitleCardContainer,
@@ -27,7 +28,9 @@ export default function TintsWrapsPage({images_arr}) {
     return (
         <TintsWrapsStyled>
             <InfoSection>
-                <GalleryWave images_arr={images_arr} viewportWidth={viewportWidth} text="Tints"/>
+                <GalleryWaveWrapper>
+                    <GalleryWave images_arr={images_arr} viewportWidth={viewportWidth}/>
+                </GalleryWaveWrapper>
                 <InfoWrapper>
                     <InfoContainer>
                         <TitleCardContainer>
@@ -46,7 +49,9 @@ export default function TintsWrapsPage({images_arr}) {
                 </InfoWrapper>
             </InfoSection>
             <InfoSection>
-                <GalleryWave images_arr={images_arr} viewportWidth={viewportWidth} text="Wraps"/>
+                <GalleryWaveWrapper>
+                    <GalleryWave images_arr={images_arr} viewportWidth={viewportWidth}/>
+                </GalleryWaveWrapper>
                 <InfoWrapper>
                 <InfoContainer>
                         <TitleCardContainer>
@@ -65,7 +70,9 @@ export default function TintsWrapsPage({images_arr}) {
                 </InfoWrapper>
             </InfoSection>
             <InfoSection>
-                <GalleryWave images_arr={images_arr} viewportWidth={viewportWidth} text="All"/>
+                <GalleryWaveWrapper>
+                    <GalleryWave images_arr={images_arr} viewportWidth={viewportWidth}/>
+                </GalleryWaveWrapper>
                 <InfoWrapper>
                 <InfoContainer>
                         <TitleCardContainer>

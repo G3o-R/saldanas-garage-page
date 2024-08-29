@@ -15,9 +15,9 @@ export default function Navbar() {
     let lastScrollY = window.scrollY;
 
     window.addEventListener("scroll", () => {
-        if (lastScrollY > window.scrollY && window.scrollY > 400) {
+        if (lastScrollY > window.scrollY && window.scrollY > 100) {
             setEffect("--visible");
-        } else if (lastScrollY < window.scrollY && window.scrollY > 400) {
+        } else if (lastScrollY < window.scrollY && window.scrollY > 100) {
             setEffect("--hidden");
         }
         lastScrollY = window.scrollY;

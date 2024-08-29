@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const GalleryWaveContainer = styled.div`
     overflow-y: hidden;
     position: relative;
-    /* border: 10px #212930 solid; */
 `;
 
 export const GalleryGrid = styled.div`
@@ -46,22 +45,6 @@ export const ImgContainer = styled.div`
             pointer-events: none;
         }
     }
-`;
-
-export const HeaderContainer = styled.div`
-    position: absolute;
-    bottom: 0;
-    left: 0;
-`;
-
-
-export const StyledHeader = styled.h1`
-    font-size: 4rem;
-    font-weight: 500;
-    color: #FFFFFF;
-    margin: 15px;
-    text-decoration: underline;
-
 `;
 
 export const ShadowOverlay = styled.div`

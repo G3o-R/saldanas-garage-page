@@ -38,6 +38,7 @@ export default function GalleryWave({ images_arr, viewportWidth}) {
     }
 
     const desiredLength = numOfImagesPerRow * 4; // adjust this as needed
+    console.log(numOfImagesPerRow)
     
     const extendedImagesArr = extendArrayToLength(images_arr, desiredLength);
     // i need to break this down and make sure I understand it
@@ -96,8 +97,6 @@ export default function GalleryWave({ images_arr, viewportWidth}) {
                 {GalleryWaveDisplay}
             </GalleryGrid>
             {/* <ShadowOverlay /> */}
-            <HeaderContainer>
-            </HeaderContainer>
         </GalleryWaveContainer>
     );
 }
