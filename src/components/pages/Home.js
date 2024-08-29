@@ -41,10 +41,10 @@ function Home({pageComponents}) {
         <HomePage> 
             <ImageCarousel images_arr={images_arr}/>
             <BiographySection />
-            <ContentContainer id="content-column">
+            <ContentContainer id="content-column" name="about">
                 {contentToDisplay}
             </ContentContainer>
-                <ReviewsContainer>
+                <ReviewsContainer name="reviews">
                     {reviewsToDisplay}
                 </ReviewsContainer>
             <Footer />

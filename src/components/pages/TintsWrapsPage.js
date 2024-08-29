@@ -38,7 +38,7 @@ export default function TintsWrapsPage({images_arr}) {
                     </InfoContainer>
                 </InfoWrapper>
             </InfoSection>
-            <InfoSection>
+            {/* <InfoSection>
                 <GalleryWave images_arr={images_arr} viewportWidth={viewportWidth} text="Wraps"/>
                 <InfoWrapper>
                     <InfoContainer>
@@ -65,7 +65,7 @@ export default function TintsWrapsPage({images_arr}) {
                             </p>
                     </InfoContainer>
                 </InfoWrapper>
-            </InfoSection>
+            </InfoSection> */}
         </TintsWrapsStyled>
     );
 }

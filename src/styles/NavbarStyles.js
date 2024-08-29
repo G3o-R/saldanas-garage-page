@@ -88,6 +88,9 @@ export const NavLink = styled(Link)`
   text-decoration: none;
   font-size: 16px;
   position: relative;
+  background: none;
+  border: none;
+  cursor:pointer;
 
   &::before {
     content: "";
@@ -104,4 +107,5 @@ export const NavLink = styled(Link)`
   &:hover::before {
     width: 100%;
   }
+
 `;
