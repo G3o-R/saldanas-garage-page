@@ -39,7 +39,6 @@ function Home({pageComponents}) {
     return (
         <HomePage> 
             <ImageCarousel images_arr={images_arr}/>
-            <Navbar />
             <BiographySection />
             <ContentContainer id="content-column">
                 {contentToDisplay}

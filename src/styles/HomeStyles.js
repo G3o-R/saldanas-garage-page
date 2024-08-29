@@ -10,9 +10,7 @@ const bobble = keyframes`
 
 export const HomePage = styled.div`
   position: relative;
-  /* background-color: rgba(0, 0, 128); */
   background-image: url(${backGroundImage});
-  /* background-repeat: no-repeat; */
   background-blend-mode: lighten;
   overflow-x: hidden;
   width: 100%;

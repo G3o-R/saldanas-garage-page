@@ -5,6 +5,7 @@ import TintsWrapsPage from './pages/TintsWrapsPage';
 import { useContext } from 'react';
 import { Context } from './Context/Context';
 import LoadingPage from './LoadingPage';
+import Navbar from './Navbar';
 
 function App() {
   const {isLoading, pageComponents} = useContext(Context)
@@ -16,8 +17,9 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className="App" style={{paddingTop: "90px"}}>
       <BrowserRouter>
+      <Navbar />
         <Routes>
           <Route path="/" element={<Home pageComponents={pageComponents}/>} />
           <Route path="/tints-wraps" element={<TintsWrapsPage images_arr={pageComponents.images_arr}/>} />

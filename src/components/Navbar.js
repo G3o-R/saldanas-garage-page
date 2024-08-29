@@ -1,29 +1,43 @@
-import { useNavigate } from "react-router";
 import { 
-    AnchorContainer,
+    LogoWrapper,
     Logo,
-    LogoWrapper, 
     NavbarContainer,
-    StyledAnchor
+    NavLinks,
+    NavLink
  } from "../styles/NavbarStyles";
+ import { useState } from "react";
 
 
 export default function Navbar(){
+  const [effect, setEffect] = useState("--visible")
 
-    const navigate = useNavigate()
-    function GoToTintsNWraps(){
-        navigate("/tints-wraps")
-    }
+    let lastScrollY = window.scrollY
+    window.addEventListener("scroll",()=>{
+        if(lastScrollY > window.scrollY && window.scrollY > 400){
+            setEffect("--visible")
+        }
+        if(lastScrollY > window.scrollY && window.scrollY < 400){
+            setEffect("--visible")
+        }
+        else if(lastScrollY < window.scrollY && window.scrollY > 400){
+            setEffect("--hidden")
+        }
+        lastScrollY = window.scrollY
+    })
+
+
     return(
-        <NavbarContainer>
+        <NavbarContainer className={effect}>
             <LogoWrapper>
                 <Logo src="/saldanas-garage-logo.jpg" alt="company logo" />
             </LogoWrapper>
-            <AnchorContainer>
-                <StyledAnchor onClick={GoToTintsNWraps}>About</StyledAnchor>
-                <StyledAnchor>Reviews</StyledAnchor>
-                <StyledAnchor>Contact Us</StyledAnchor>
-            </AnchorContainer>
+            <NavLinks>
+                <NavLink to="/" >Home</NavLink>
+                <NavLink to="/" >About</NavLink>
+                <NavLink to="/" >Reviews</NavLink>
+                <NavLink to="/tints-wraps" >Tints N Wraps</NavLink>
+            </NavLinks>
+            
         </NavbarContainer>
     )
 }
