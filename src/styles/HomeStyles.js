@@ -1,6 +1,8 @@
 import styled, { keyframes } from "styled-components";
 import backGroundImage from "../Images/grunge-gray-concrete-textured-background.jpg";
 // import backGroundImage from "../Images/vecteezy_free-metal-texture-vector_110348.jpg"
+import LogoJpg from "../Images/saldanas-garage-logo.jpg"
+
 
 const bobble = keyframes`
   0% { transform: translateY(0); }
@@ -10,7 +12,11 @@ const bobble = keyframes`
 
 export const HomePage = styled.div`
   position: relative;
-  background-image: url(${backGroundImage});
+  background-image: url(${LogoJpg});
+  background-color: #000;
+  background-position:center;
+  background-repeat: no-repeat;
+  background-size: contain;
   background-blend-mode: lighten;
   overflow-x: hidden;
   width: 100%;

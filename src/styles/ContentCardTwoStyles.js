@@ -82,7 +82,7 @@ export const TextWrapper = styled.div`
 
 export const TextContainer = styled.div`
     display: flex;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(30, 30, 30, .7);
     color: #fff;
     border-radius: 12px;
     flex-direction: column;

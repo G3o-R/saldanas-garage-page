@@ -20,7 +20,7 @@ export const NavbarContainer = styled.div`
     
     @media screen and (max-width: 450px) {
         justify-content: center;
-        background-image: url(${LogoJpg});
+        /* background-image: url(${LogoJpg}); */
         background-position:center;
     }
 `;
@@ -33,7 +33,9 @@ export const LogoWrapper = styled.div`
     aspect-ratio: 1/1;
     margin: 0em 1em 0em 1em;
     @media screen and (max-width: 450px) {
-        display:none;
+        &.nav-bar {
+          display:none;
+        }
     }
 `;
 

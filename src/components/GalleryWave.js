@@ -38,7 +38,6 @@ export default function GalleryWave({ images_arr, viewportWidth}) {
     }
 
     const desiredLength = numOfImagesPerRow * 4; // adjust this as needed
-    console.log(numOfImagesPerRow)
     
     const extendedImagesArr = extendArrayToLength(images_arr, desiredLength);
     // i need to break this down and make sure I understand it
@@ -53,7 +52,6 @@ export default function GalleryWave({ images_arr, viewportWidth}) {
     const animateImages = () => {
         let currentAnimationID = 1;
         const maxAnimationID = numOfImagesPerRow + 4;
-
         const runAnimation = () => {
             interval = setInterval(() => {
                 document.querySelectorAll('.active').forEach(el => el.classList.remove('active'));
@@ -67,10 +65,10 @@ export default function GalleryWave({ images_arr, viewportWidth}) {
                 }
             }, 250); 
         };
-
+        
         runAnimation();
     };
-
+    
     useEffect(() => {
         animateImages();
 
@@ -78,7 +76,7 @@ export default function GalleryWave({ images_arr, viewportWidth}) {
             clearInterval(interval);
             document.querySelectorAll('.active').forEach(el => el.classList.remove('active'));
         };
-    }, [numOfImagesPerRow]);
+    }, []);
     
     
     const GalleryWaveDisplay = extendedImagesArrWithAnimationIDs.map((imgObj, index) => {

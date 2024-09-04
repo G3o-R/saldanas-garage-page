@@ -35,7 +35,7 @@ export default function Navbar() {
 
     return (
         <NavbarContainer className={effect}>
-            <LogoWrapper>
+            <LogoWrapper className="nav-bar">
                 <Logo src="/saldanas-garage-logo.jpg" alt="company logo" />
             </LogoWrapper>
             <NavLinks>
