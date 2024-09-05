@@ -3,9 +3,10 @@ import {
     InfoSection,
     GalleryWaveWrapper,
     TintsWrapsStyled,
-    DontKnowWhatToCallThisYetWrapper,
-    DontKnowWhatToCallThisYetContainer,
+    CardsWrapper,
+    CardsContainer,
     StyledFlexColumnWrapper,
+    StyledHeader,
 } from "../../styles/TintsWrapsPageStyles";
 import GalleryWave from "../GalleryWave";
 import InfoCard from "../InfoCard";
@@ -36,36 +37,85 @@ export default function TintsWrapsPage({images_arr}) {
     }, []);
 
     return (
-        <TintsWrapsStyled>
-            <InfoSection>
-                <GalleryWaveWrapper>
-                    <GalleryWave images_arr={images_arr} viewportWidth={viewportWidth}/>
-                </GalleryWaveWrapper>
-                <InfoCard infoObj={{
-                    title: "Tints",
-                    text: "Pro-nano is Geoshield's most advanced spectrally selective window film designed for automotive applications. The film is virtually clear and haze free but blocks a significant amount of UV and heat. IR blocking ceramic nano particles, in combination with UV stabilized film provides long lasting protection to your home, office or vehicle."
-                }}/>
-                <DontKnowWhatToCallThisYetWrapper>
-                    <DontKnowWhatToCallThisYetContainer>
-                        <StyledFlexColumnWrapper>
-                            <span> <ShieldSVG /> Lifetime Warranty</span>
-                            <span> <StableSVG /> Color Stable</span>
-                            <span> <GradientSVG /> Matches Most Factory Tint</span>
-                            <span> <TearDrop /> Deep Dyed + Ceramic Technology</span>
-                            <span> <MagnifyingGlass /> High Optical Clarity</span>
-                            <span> <Satellite /> No Signal Interferences</span>
-                            <span> <SunProtectionSVG /> 99% UV Rejection</span>
-                            <span> <SunShieldSVG /> High IR Rejection</span>
-                        </StyledFlexColumnWrapper>
-                    </DontKnowWhatToCallThisYetContainer>
-                </DontKnowWhatToCallThisYetWrapper>
-                
-            </InfoSection>
-                {/* <InfoCard infoObj={{
-                    title: "Tints",
-                    text: "C2 Carbon is an advanced nano carbon film produced using the latest technology in the industry. Using this technology, we created a film that not only looks great, it performs great too. In addition, this process has allowed us to bring premium looks and performance to you at a mid-range price point."
-                }}/> */}
-            
-        </TintsWrapsStyled>
+      <TintsWrapsStyled>
+        <GalleryWaveWrapper>
+          <GalleryWave images_arr={images_arr} viewportWidth={viewportWidth} />
+        </GalleryWaveWrapper>
+        <InfoSection>
+        <StyledHeader>Tints</StyledHeader>
+        <CardsWrapper>
+            <CardsContainer>
+              <InfoCard
+                infoObj={{
+                  title: "Pro-Nano Ceramic",
+                  text: "Pro-nano is Geoshield's most advanced spectrally selective window film designed for automotive applications. The film is virtually clear and haze free but blocks a significant amount of UV and heat. IR blocking ceramic nano particles, in combination with UV stabilized film provides long lasting protection to your home, office or vehicle.",
+                }}
+              />
+              <StyledFlexColumnWrapper>
+                <span>
+                  <ShieldSVG /> Lifetime Warranty
+                </span>
+                <span>
+                  <StableSVG /> Color Stable
+                </span>
+                <span>
+                  <GradientSVG /> Matches Most Factory Tint
+                </span>
+                <span>
+                  <TearDrop /> Deep Dyed + Ceramic Technology
+                </span>
+                <span>
+                  <MagnifyingGlass /> High Optical Clarity
+                </span>
+                <span>
+                  <Satellite /> No Signal Interferences
+                </span>
+                <span>
+                  <SunProtectionSVG /> 99% UV Rejection
+                </span>
+                <span>
+                  <SunShieldSVG /> High IR Rejection
+                </span>
+              </StyledFlexColumnWrapper>
+            </CardsContainer>
+          </CardsWrapper>
+          <CardsWrapper>
+            <CardsContainer>
+              <InfoCard
+                infoObj={{
+                  title: "C2 Carbon",
+                  text: "C2 Carbon is an advanced nano carbon film produced using the latest technology in the industry. Using this technology, we created a film that not only looks great, it performs great too. In addition, this process has allowed us to bring premium looks and performance to you at a mid-range price point.",
+                }}
+              />
+              <StyledFlexColumnWrapper>
+                <span>
+                  <ShieldSVG /> Lifetime Warranty
+                </span>
+                <span>
+                  <StableSVG /> Color Stable
+                </span>
+                <span>
+                  <GradientSVG /> 2 Ply 1.5 Mil Construction
+                </span>
+                <span>
+                  <TearDrop /> Nano Carbon Technology
+                </span>
+                <span>
+                  <MagnifyingGlass /> High Optical Clarity
+                </span>
+                <span>
+                  <Satellite /> No Signal Interferences
+                </span>
+                <span>
+                  <SunProtectionSVG /> 99% UV Rejection
+                </span>
+                <span>
+                  <SunShieldSVG /> High TSER Rejection
+                </span>
+              </StyledFlexColumnWrapper>
+            </CardsContainer>
+          </CardsWrapper>
+        </InfoSection>
+      </TintsWrapsStyled>
     );
 }

@@ -2,16 +2,16 @@ import styled from "styled-components";
 
 export const InfoCardWrapper = styled.div`
     width: 100%;
-    max-width: 1200px;
-    padding: 0 20px;
-`;
+    max-width: 600px;
+    height: 100%;
+    max-height: auto;
+    background: #202020;
+    border-radius: 10px;
+    `;
 
 export const InfoContainer = styled.div`
-    background: #202020;
-    padding: 20px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
     text-align: center;
+    padding: 20px;
 `;
 
 export const TitleCardContainer = styled.div`

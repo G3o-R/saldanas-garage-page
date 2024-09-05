@@ -1,28 +1,32 @@
 import styled from 'styled-components';
 
 export const TintsWrapsStyled = styled.div`
-    background: #1D242B;
-    padding: 50px 0;
+    background-color: #202020;
     overflow-x: hidden;
     min-height: 100vh;
-`;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    `;
 
 export const InfoSection = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+    max-width: 1400px;
     padding: 50px 0;
-    background-color: #212930;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
     margin: 20px 0;
     border-radius: 10px;
-`;
+    `;
 
 export const GalleryWaveWrapper = styled.div`
     width: 100%;
-    margin-bottom: 30px;
     position: relative;
-`;
+    background: #101010;
+    padding-bottom: 30px;
+    `;
 
 export const GalleryWaveContainer = styled.div`
     overflow-y: hidden;
@@ -99,29 +103,40 @@ export const StyledHeader = styled.h1`
     color: #ffffff;
     font-family: 'Roboto', sans-serif;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-align: left;
+    width: 100%;
 `;
 
-export const DontKnowWhatToCallThisYetWrapper = styled.div`
+export const CardsWrapper = styled.div`
     width: 100%;
     margin-top: 20px;
     display: flex;
     justify-content: center;
 `;
 
-export const DontKnowWhatToCallThisYetContainer = styled.div`
+export const CardsContainer = styled.div`
     display: flex;
+    flex-direction: column;
+    gap: 15px;
     justify-content: center;
     background-color: #101010;
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
-    max-width: 1200px;
+    max-width: 400px;
     width: 100%;
+
+    @media screen and (min-width: 800px){
+        flex-direction: row;
+        width: 100;
+        max-width: 100%;
+    }
 `;
 
 export const StyledFlexColumnWrapper = styled.div`
     background-color: #1D242B;
-    width: auto;
+    width: 100%;
+    max-width: 21rem;
     padding: 25px;
     border-radius: 15px;
     display: flex;
