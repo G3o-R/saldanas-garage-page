@@ -8,7 +8,7 @@ export default function InfoCard({infoObj}){
     const {title, text} = infoObj
 
     return(
-        <InfoCardContainer>
+        <InfoCardContainer className="info-card-container">
             <TitleCardContainer>
                 <h1>{title}</h1>
             </TitleCardContainer>
