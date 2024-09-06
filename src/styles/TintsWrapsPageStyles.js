@@ -91,7 +91,8 @@ export const StyledHeader = styled.h1`
     text-align: left;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     width: 100%;
-    margin-left: 3rem;
+    /* margin-left: 3rem; */
+    margin: 0em 0rem 0rem 1em;
 `;
 
 export const CardsWrapper = styled.div`
@@ -106,6 +107,7 @@ export const CardsContainer = styled.div`
     flex-direction: column;
     gap: 15px;
     justify-content: center;
+    align-items: center;
     background-color: #101010;
     padding: 30px;
     border-radius: 15px;
