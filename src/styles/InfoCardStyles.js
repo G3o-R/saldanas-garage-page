@@ -1,18 +1,13 @@
 import styled from "styled-components";
 
-export const InfoCardWrapper = styled.div`
+export const InfoCardContainer = styled.div`
     width: 100%;
-    max-width: 600px;
-    height: 100%;
-    max-height: auto;
+    max-width: 21rem;
     background: #202020;
     border-radius: 10px;
-    `;
-
-export const InfoContainer = styled.div`
     text-align: center;
     padding: 20px;
-`;
+    `;
 
 export const TitleCardContainer = styled.div`
     margin-bottom: 20px;

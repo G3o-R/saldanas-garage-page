@@ -1,6 +1,5 @@
 import { 
-    InfoCardWrapper,
-    InfoContainer,
+    InfoCardContainer,
     TitleCardContainer,
     TextBox
  } from "../styles/InfoCardStyles"
@@ -9,8 +8,7 @@ export default function InfoCard({infoObj}){
     const {title, text} = infoObj
 
     return(
-        <InfoCardWrapper>
-        <InfoContainer>
+        <InfoCardContainer>
             <TitleCardContainer>
                 <h1>{title}</h1>
             </TitleCardContainer>
@@ -19,7 +17,6 @@ export default function InfoCard({infoObj}){
                 {text}
                 </p>
             </TextBox>
-        </InfoContainer>
-    </InfoCardWrapper>
+    </InfoCardContainer>
     )
 }

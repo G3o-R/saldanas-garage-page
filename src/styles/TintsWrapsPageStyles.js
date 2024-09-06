@@ -76,20 +76,6 @@ export const ImgContainer = styled.div`
     }
 `;
 
-export const ShadowOverlay = styled.div`
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-        to top left,
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0)
-    );
-    z-index: 1;
-`;
-
 export const HeaderContainer = styled.div`
     position: absolute;
     bottom: 0;
@@ -102,9 +88,14 @@ export const StyledHeader = styled.h1`
     font-size: 4rem;
     color: #ffffff;
     font-family: 'Roboto', sans-serif;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     text-align: left;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     width: 100%;
+    margin-left: 3rem;
+    
+    @media screen and (min-width: 800px){
+        margin-left: 0;
+    }
 `;
 
 export const CardsWrapper = styled.div`
@@ -137,7 +128,7 @@ export const StyledFlexColumnWrapper = styled.div`
     background-color: #1D242B;
     width: 100%;
     max-width: 21rem;
-    padding: 25px;
+    padding: 20px;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
