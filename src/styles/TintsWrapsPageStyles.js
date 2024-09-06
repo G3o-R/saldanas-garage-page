@@ -92,10 +92,6 @@ export const StyledHeader = styled.h1`
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     width: 100%;
     margin-left: 3rem;
-    
-    @media screen and (min-width: 800px){
-        margin-left: 0;
-    }
 `;
 
 export const CardsWrapper = styled.div`
