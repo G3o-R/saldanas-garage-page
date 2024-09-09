@@ -7,7 +7,9 @@ export const InfoCardContainer = styled.div`
     background: #202020;
     border-radius: 10px;
     text-align: center;
-    padding: 20px;
+    @media screen and (max-width: 800px) {
+        padding: 20px;
+    }
     `;
 
 export const TitleCardContainer = styled.div`

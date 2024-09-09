@@ -74,7 +74,6 @@ export const NavLinks = styled.div`
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
-  /* gap: 4rem; */
   width: 70%;
   padding-bottom: 5px;
 
@@ -82,13 +81,18 @@ export const NavLinks = styled.div`
         background-color: #303030;
         padding: 5px 15px 5px;
         border-radius: 24px 24px 24px 24px;
-    }
+      }
+
+      button, a{
+        padding: 0;
+        height: fit-content;
+        font-size: 16px;
+      }
   `;
 
 export const NavLink = styled(Link)`
   color: white;
   text-decoration: none;
-  font-size: 16px;
   position: relative;
   background: none;
   border: none;

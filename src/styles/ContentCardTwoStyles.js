@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+// have to add media queries so that the size increases along with the screen
 export const CardWrapper = styled.div`
     width: 100%;
     display: flex;

@@ -30,6 +30,7 @@ export const HomePage = styled.div`
   align-items: center;
   color: white;
   font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
 `;
 
 export const LogoContainer = styled.div`
@@ -60,12 +61,11 @@ export const ContentContainer = styled.div`
   margin: 4rem 0rem 55rem 0rem;
 
   @media screen and (min-width: 650px) {
-    width: 650px;
+    max-width: 850px;
   }
 
-  @media screen {
-    max-width: 950px;
-    width:100%;
+  @media screen and (min-width: 950px){
+    max-width: 1150px;
   }
 `;
 

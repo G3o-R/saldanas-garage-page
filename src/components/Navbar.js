@@ -24,13 +24,13 @@ export default function Navbar() {
     });
 
     const handleScrollToSection = (sectionId) => {
-        navigate("/"); // Navigate to the home page
+        navigate("/");
         setTimeout(() => {
             const section = document.getElementsByName(sectionId)[0];
             if (section) {
-                section.scrollIntoView({ behavior: "smooth" });
+                section.scrollIntoView({behavior: "smooth"});
             }
-        }, 100); // Delay to ensure the page has loaded before scrolling
+        }, 100);
     };
 
     return (

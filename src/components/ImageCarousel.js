@@ -16,7 +16,7 @@ export default function ImageCarousel({ images_arr }) {
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
-
+  
   useEffect(() => {
     const scrollContainer = scrollContainerRef.current;
     const content = contentRef.current;
@@ -29,8 +29,8 @@ export default function ImageCarousel({ images_arr }) {
             scrollContainer.scrollLeft = 0;
           } else {
             scrollContainer.scrollLeft += 1;
+            }
           }
-        }
       }, 10);
     };
 
@@ -39,49 +39,49 @@ export default function ImageCarousel({ images_arr }) {
     return () => {
       clearInterval(scrollInterval);
     };
-  }, [isDragging]);
+  }, []);
 
-  const handleMouseDown = (e) => {
-    setIsDragging(true);
-    setStartX(e.pageX - scrollContainerRef.current.offsetLeft);
-    setScrollLeft(scrollContainerRef.current.scrollLeft);
-  };
+  // const handleMouseDown = (e) => {
+  //   setIsDragging(true);
+  //   setStartX(e.pageX - scrollContainerRef.current.offsetLeft);
+  //   setScrollLeft(scrollContainerRef.current.scrollLeft);
+  // };
 
-  const handleMouseLeave = () => {
-    if (isDragging) {
-      setIsDragging(false);
-    }
-  };
+  // const handleMouseLeave = () => {
+  //   if (isDragging) {
+  //     setIsDragging(false);
+  //   }
+  // };
 
-  const handleMouseUp = () => {
-    setIsDragging(false);
-  };
+  // const handleMouseUp = () => {
+  //   setIsDragging(false);
+  // };
 
-  const handleMouseMove = (e) => {
-    if (!isDragging) return;
-    e.preventDefault();
-    const x = e.pageX - scrollContainerRef.current.offsetLeft;
-    const walk = (x - startX) * 1;
-    scrollContainerRef.current.scrollLeft = scrollLeft - walk;
-  };
+  // const handleMouseMove = (e) => {
+  //   if (!isDragging) return;
+  //   e.preventDefault();
+  //   const x = e.pageX - scrollContainerRef.current.offsetLeft;
+  //   const walk = (x - startX) * 1;
+  //   scrollContainerRef.current.scrollLeft = scrollLeft - walk;
+  // };
 
-  const handleTouchStart = (e) => {
-    setIsDragging(true);
-    setStartX(e.touches[0].pageX - scrollContainerRef.current.offsetLeft);
-    setScrollLeft(scrollContainerRef.current.scrollLeft);
-  };
+  // const handleTouchStart = (e) => {
+  //   setIsDragging(true);
+  //   setStartX(e.touches[0].pageX - scrollContainerRef.current.offsetLeft);
+  //   setScrollLeft(scrollContainerRef.current.scrollLeft);
+  // };
 
-  const handleTouchMove = (e) => {
-    if (!isDragging) return;
-    e.preventDefault();
-    const x = e.touches[0].pageX - scrollContainerRef.current.offsetLeft;
-    const walk = (x - startX) * 1;
-    scrollContainerRef.current.scrollLeft = scrollLeft - walk;
-  };
+  // const handleTouchMove = (e) => {
+  //   if (!isDragging) return;
+  //   e.preventDefault();
+  //   const x = e.touches[0].pageX - scrollContainerRef.current.offsetLeft;
+  //   const walk = (x - startX) * 1;
+  //   scrollContainerRef.current.scrollLeft = scrollLeft - walk;
+  // };
 
-  const handleTouchEnd = () => {
-    setIsDragging(false);
-  };
+  // const handleTouchEnd = () => {
+  //   setIsDragging(false);
+  // };
 
   return (
     <div style={{ position: 'relative', width: '100%' }}>
@@ -94,13 +94,13 @@ export default function ImageCarousel({ images_arr }) {
       </CarouselTextWrapper>
       <CarouselContainer
         ref={scrollContainerRef}
-        onMouseDown={handleMouseDown}
-        onMouseLeave={handleMouseLeave}
-        onMouseUp={handleMouseUp}
-        onMouseMove={handleMouseMove}
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-        onTouchEnd={handleTouchEnd}
+        // onMouseDown={handleMouseDown}
+        // onMouseLeave={handleMouseLeave}
+        // onMouseUp={handleMouseUp}
+        // onMouseMove={handleMouseMove}
+        // onTouchStart={handleTouchStart}
+        // onTouchMove={handleTouchMove}
+        // onTouchEnd={handleTouchEnd}
       >
         <CarouselWrapper ref={contentRef}>
           {images_arr.concat(images_arr).map((content, index) => (
