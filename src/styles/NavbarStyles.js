@@ -9,6 +9,7 @@ export const NavbarContainer = styled.div`
   z-index: 10;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   width: 100%;
   background-color: #202020;
   height: 90px;
@@ -20,7 +21,6 @@ export const NavbarContainer = styled.div`
     
     @media screen and (max-width: 450px) {
         justify-content: center;
-        /* background-image: url(${LogoJpg}); */
         background-position:center;
     }
 `;
@@ -31,10 +31,11 @@ export const LogoWrapper = styled.div`
     overflow: hidden;
     width: 70px;
     aspect-ratio: 1/1;
-    margin: 0em 1em 0em 1em;
+    margin: 0em 2em 0em 1em;
     @media screen and (max-width: 450px) {
         &.nav-bar {
-          display:none;
+          /* display:none; */
+          margin: 0em 0em 0em 1em;
         }
     }
 `;
@@ -69,25 +70,34 @@ export const StyledAnchor = styled.a`
 `;
 
 export const NavLinks = styled.div`
-  margin-left: 15px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
+  gap: 10px;
   flex-direction: row;
   width: 70%;
   padding-bottom: 5px;
 
+  button, a{
+    padding: 0;
+    font-size: 16px;
+    font-weight: 500;
+    align-content: center;
+  }
+  button{
+    padding-top: 2px;
+    font-weight: 500;
+  }
+  
   @media screen and (max-width: 450px) {
-        background-color: #303030;
-        padding: 5px 15px 5px;
-        border-radius: 24px 24px 24px 24px;
-      }
-
-      button, a{
-        padding: 0;
-        height: fit-content;
-        font-size: 16px;
-      }
+    background-color: #303030;
+    padding: 5px 15px 5px;
+    border-radius: 24px 24px 24px 24px;
+    width: 70%;
+    justify-content: space-around;
+    gap: 5px;
+  }
+  
   `;
 
 export const NavLink = styled(Link)`
@@ -97,7 +107,7 @@ export const NavLink = styled(Link)`
   background: none;
   border: none;
   cursor:pointer;
-
+  
   &::before {
     content: "";
     position: absolute;

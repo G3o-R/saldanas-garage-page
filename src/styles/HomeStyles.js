@@ -13,7 +13,7 @@ const bobble = keyframes`
 export const HomePage = styled.div`
   position: relative;
   background-image: url(${LogoJpg});
-  background-color: #000;
+  background-color: #07080a;
   background-position:center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -88,13 +88,14 @@ export const ReviewsContainer = styled.div`
   &::-webkit-scrollbar {
     height: 8px;
   }
-
+  
   &::-webkit-scrollbar-thumb {
-    background: #888;
+    cursor: pointer;
+    background: #bcbfc1;
     border-radius: 4px;
   }
 
   &::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    background: #d3d4d6;
   }
 `;

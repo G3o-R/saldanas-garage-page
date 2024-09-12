@@ -28,13 +28,13 @@ export const CardContainer = styled.div`
 
 export const ImageWrapper = styled.div`
     z-index: 2;
-    background-color: #202020;
-    padding: 12px;
-    border-radius: 24px;
+    /* background-color: #202020; */
+    /* padding: 12px; */
+    /* border-radius: 24px; */
 `;
 
 export const Imagecontainer = styled.div`
-    border-radius: 12px;
+    border-radius: 6px;
     overflow: hidden;
     position: relative;
 

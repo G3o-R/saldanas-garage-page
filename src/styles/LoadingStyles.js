@@ -47,7 +47,7 @@ export const LogoContainer = styled.div`
   border: 10px solid #C0C0C0;
   border-radius: 50%;
   overflow: hidden;
-  animation: ${bobble} 2s ease-in-out infinite;
+  /* animation: ${bobble} 2s ease-in-out infinite; */
 
   img {
     width: 100%;

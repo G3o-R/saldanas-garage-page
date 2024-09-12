@@ -28,16 +28,13 @@ export default function Navbar() {
         setTimeout(() => {
             const section = document.getElementsByName(sectionId)[0];
             if (section) {
-                section.scrollIntoView({behavior: "smooth"});
+                section.scrollIntoView({behaviour: "smooth"});
             }
         }, 100);
     };
 
     return (
         <NavbarContainer className={effect}>
-            <LogoWrapper className="nav-bar">
-                <Logo src="/saldanas-garage-logo.jpg" alt="company logo" />
-            </LogoWrapper>
             <NavLinks>
                 <NavLink to="/">Home</NavLink>
                 <NavLink as="button" onClick={() => handleScrollToSection("about")}>
@@ -48,6 +45,9 @@ export default function Navbar() {
                 </NavLink>
                 <NavLink to="/tints-wraps">Tints N Wraps</NavLink>
             </NavLinks>
+            <LogoWrapper className="nav-bar">
+                <Logo src="/saldanas-garage-logo.jpg" alt="company logo" />
+            </LogoWrapper>
         </NavbarContainer>
     );
 }
