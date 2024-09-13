@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import LogoJpg from "../Images/saldanas-garage-logo.jpg"
 
 export const NavbarContainer = styled.div`
   position: fixed;

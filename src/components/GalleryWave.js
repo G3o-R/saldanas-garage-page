@@ -1,5 +1,5 @@
-import { GalleryGrid, GalleryWaveContainer, HeaderContainer, ImgContainer, ImgWrapper, ShadowOverlay, StyledHeader } from "../styles/GalleryWaveStyles";
-import { useState, useEffect } from "react";
+import { GalleryGrid, GalleryWaveContainer,ImgContainer, ImgWrapper,} from "../styles/GalleryWaveStyles";
+import {useEffect } from "react";
 
 const extendArrayToLength = (array, desiredLength) => {
     const extendedArray = [];

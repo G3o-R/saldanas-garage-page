@@ -1,19 +1,13 @@
 import { 
     ContentContainer,
     HomePage,
-    LogoContainer,
     ReviewsContainer,
-    ReviewsWrapper
 } from "../../styles/HomeStyles";
 import { useState } from "react";
-// import ContentCard from "./ContentCard";
 import ImageCarousel from "../ImageCarousel";
 import Footer from "../Footer";
-import Navbar from "../Navbar";
-// import BiographySection from "../BiographySection";
 import BiographySectionTwo from "../BiographySectionTwo";
 import ReviewCard from "../ReviewCard";
-// import HeroSection from "./HeroSection";
 import ContentCardTwo from "../ContentCardTwo";
 
 function Home({pageComponents}) {

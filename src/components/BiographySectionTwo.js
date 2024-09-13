@@ -4,7 +4,6 @@ import {
     ImageContainer,
     TextBoxContainer,
     TextBoxWrapper,
-    Tint
  } from "../styles/BiographySectionTwoStyles";
 
 
