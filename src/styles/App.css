@@ -37,3 +37,23 @@
     transform: rotate(360deg);
   }
 }
+
+@font-face {
+  font-family: Sanchez;
+  src: url(../../public/Sanchez-Regular.ttf)
+}
+
+@font-face {
+  font-family: Ruthie;
+  src: url(../../public/Ruthie-Regular.ttf)
+}
+
+@font-face {
+  font-family: SourceSerif4;
+  src: url(../../public/SourceSerif4-VariableFont_opsz\,wght.ttf)
+}
+
+@font-face {
+  font-family: Parisienne;
+  src: url(../../public/Parisienne-Regular.ttf);
+}

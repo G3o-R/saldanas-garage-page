@@ -70,12 +70,11 @@ export const CarouselTextContainer = styled.div`
 `;
 
 export const CarouselText = styled.h1`
-  /* animation: ${textTransition} 1500ms linear infinite; */
   font-size: 60px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: SourceSerif4, Helvetica, sans-serif;
   color: #f7f7f7;
   margin: 0;
-  text-align: left; /* Align text to the left */
+  text-align: left;
 
   @media screen and (min-width: 480px) {
     font-size: 50px;

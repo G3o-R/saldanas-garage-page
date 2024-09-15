@@ -10,94 +10,78 @@ export const NavbarContainer = styled.div`
   align-items: center;
   justify-content: flex-end;
   width: 100%;
-  background-color: #202020;
-  height: 90px;
-  transition: transform 0.3s ease-in-out;
-  
+  background-color: #1b1b1b;
+  height: 120px;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  padding: 0 20px;
+
   &.--hidden {
-      transform: translateY(-100%);
-    }
-    
-    @media screen and (max-width: 450px) {
-        justify-content: center;
-        background-position:center;
-    }
+    transform: translateY(-100%);
+  }
+
+  @media screen and (max-width: 450px) {
+    justify-content: center;
+    padding: 0;
+    background-position: center;
+  }
 `;
 
-
 export const LogoWrapper = styled.div`
-    border-radius: 50%;
-    overflow: hidden;
-    width: 70px;
-    aspect-ratio: 1/1;
-    margin: 0em 2em 0em 1em;
-    @media screen and (max-width: 450px) {
-        &.nav-bar {
-          /* display:none; */
-          margin: 0em 0em 0em 1em;
-        }
-    }
+  border-radius: 50%;
+  overflow: hidden;
+  width: 70px;
+  aspect-ratio: 1/1;
+  margin: 0 2em 0 1em;
+  border: 2px solid #f7f7f7;
+  transition: border-color 0.3s ease;
+
+  @media screen and (max-width: 450px) {
+    /* margin: 0 0 0 1em; */
+    width: 50px;
+    border: none;
+  }
 `;
 
 export const Logo = styled.img`
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-`;
-
-export const AnchorContainer = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-grow: 1;
-    margin-left: 1em;
-`;
-
-export const StyledAnchor = styled.a`
-    color: white;
-    text-decoration: underline;
-    font-size: 1em;
-    transition: color 0.3s;
-    cursor: pointer;
-    text-align: center;
-    flex-grow: 1;
-    padding: 0 1em;
-
-    &:hover {
-        color: #FFD700;
-    }
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 `;
 
 export const NavLinks = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 10px;
+  gap: 20px;
   flex-direction: row;
-  width: 70%;
+  width: 400px;
   padding-bottom: 5px;
 
-  button, a{
+  button, a {
     padding: 0;
+    font-family: Sanchez;
     font-size: 16px;
     font-weight: 500;
     align-content: center;
+    color: white;
   }
-  button{
-    padding-top: 2px;
+
+  button {
     font-weight: 500;
   }
-  
+
   @media screen and (max-width: 450px) {
     background-color: #303030;
-    padding: 5px 15px 5px;
-    border-radius: 24px 24px 24px 24px;
+    padding: 5px 15px;
+    margin-left: 5px;
+    border-radius: 24px;
     width: 70%;
     justify-content: space-around;
-    gap: 5px;
+    gap: 10px;
+    
   }
-  
-  `;
+`;
 
 export const NavLink = styled(Link)`
   color: white;
@@ -105,8 +89,9 @@ export const NavLink = styled(Link)`
   position: relative;
   background: none;
   border: none;
-  cursor:pointer;
-  
+  cursor: pointer;
+  padding-bottom: 3px;
+
   &::before {
     content: "";
     position: absolute;
@@ -122,5 +107,49 @@ export const NavLink = styled(Link)`
   &:hover::before {
     width: 100%;
   }
-
 `;
+
+export const BannerContainer = styled.div`
+  width: 100%;
+  margin-left: auto;
+  text-align: left;
+
+  @media screen and (max-width:450px) {
+    display:none;
+  }
+`;
+
+export const Banner = styled.div`
+  font-family: Parisienne;
+  font-size: clamp(30px, 2.5vw, 80px);
+  color: #f7f7f7;
+  letter-spacing: 2px;
+  line-height: 1.2;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+`;
+
+
+// export const Banner = styled.div`
+//   font-family: Parisienne;
+//   font-size: 80px;
+//   color: #f7f7f7;
+//   letter-spacing: 2px;
+//   line-height: 1.2;
+//   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+
+//   @media screen and (max-width: 2050px){
+//     font-size: 70px;
+//   }
+//   @media screen and (max-width: 1850px){
+//     font-size: 60px;
+//   }
+//   @media screen and (max-width: 1650px){
+//     font-size: 50px;
+//   }
+//   @media screen and (max-width: 1450px){
+//     font-size: 40px;
+//   }
+//   @media screen and (max-width: 1250px){
+//     font-size: 30px;
+//   }
+// `;

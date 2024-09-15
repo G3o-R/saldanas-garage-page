@@ -3,7 +3,9 @@ import {
     Logo,
     NavbarContainer,
     NavLinks,
-    NavLink
+    NavLink,
+    BannerContainer,
+    Banner
 } from "../styles/NavbarStyles";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -35,6 +37,9 @@ export default function Navbar() {
 
     return (
         <NavbarContainer className={effect}>
+            <BannerContainer>
+                <Banner>Keeping Your Car Cool & You Looking Cooler</Banner>
+            </BannerContainer>
             <NavLinks>
                 <NavLink to="/">Home</NavLink>
                 <NavLink as="button" onClick={() => handleScrollToSection("about")}>

@@ -18,8 +18,9 @@ export const TitleCardContainer = styled.div`
     h1 {
         font-size: 2.5rem;
         color: #f7f7f7;
-        font-family: 'Roboto', sans-serif;
+        font-family: SourceSerif4,'Roboto', sans-serif;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        padding: 0px 10px 0px 10px;
     }
     `;
 
@@ -31,6 +32,7 @@ export const TextBox = styled.div`
     padding: 20px;
     
     p {
+        font-family: Sanchez;
         text-align: left;
         margin: 0;
     }

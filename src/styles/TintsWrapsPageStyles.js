@@ -87,7 +87,7 @@ export const HeaderContainer = styled.div`
 export const StyledHeader = styled.h1`
     font-size: 4rem;
     color: #ffffff;
-    font-family: 'Roboto', sans-serif;
+    font-family: SourceSerif4,'Roboto', sans-serif;
     text-align: left;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     width: 100%;
@@ -132,6 +132,7 @@ export const StyledFlexColumnWrapper = styled.div`
     text-align: left;
 
     span {
+        font-family: Sanchez;
         color: #f7f7f7;
         line-height: 2;
         font-size: 1rem;

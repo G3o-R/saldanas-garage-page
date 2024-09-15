@@ -4,7 +4,7 @@ import {
     ImageContainer,
     TextBoxContainer,
     TextBoxWrapper,
- } from "../styles/BiographySectionTwoStyles";
+ } from "../../styles/BiographySectionTwoStyles";
 
 
 export default function BiographySectionTwo(){

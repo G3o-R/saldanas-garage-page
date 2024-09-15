@@ -76,6 +76,7 @@ export const TextBoxContainer = styled.div`
 
   p {
     margin: 0;
-    color: #b3b3b3; /* Grey Text */
+    color: #b3b3b3;
+    font-family: Sanchez, Helvetica, sans-serif
   }
 `;

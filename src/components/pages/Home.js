@@ -6,7 +6,7 @@ import {
 import { useState } from "react";
 import ImageCarousel from "../ImageCarousel";
 import Footer from "../Footer";
-import BiographySectionTwo from "../BiographySectionTwo";
+import BiographySectionTwo from "../unused/BiographySectionTwo";
 import ReviewCard from "../ReviewCard";
 import ContentCardTwo from "../ContentCardTwo";
 
