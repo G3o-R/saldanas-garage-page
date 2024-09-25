@@ -127,29 +127,3 @@ export const Banner = styled.div`
   line-height: 1.2;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
 `;
-
-
-// export const Banner = styled.div`
-//   font-family: Parisienne;
-//   font-size: 80px;
-//   color: #f7f7f7;
-//   letter-spacing: 2px;
-//   line-height: 1.2;
-//   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
-
-//   @media screen and (max-width: 2050px){
-//     font-size: 70px;
-//   }
-//   @media screen and (max-width: 1850px){
-//     font-size: 60px;
-//   }
-//   @media screen and (max-width: 1650px){
-//     font-size: 50px;
-//   }
-//   @media screen and (max-width: 1450px){
-//     font-size: 40px;
-//   }
-//   @media screen and (max-width: 1250px){
-//     font-size: 30px;
-//   }
-// `;

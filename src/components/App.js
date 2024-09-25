@@ -17,9 +17,9 @@ function App() {
   }
 
   return (
-    <div className="App" style={{paddingTop: "90px"}}>
+    <div className="App">
       <BrowserRouter>
-      <Navbar />
+      {/* <Navbar /> */}
         <Routes>
           <Route path="/" element={<Home pageComponents={pageComponents}/>} />
           <Route path="/tints-wraps" element={<TintsWrapsPage images_arr={pageComponents.images_arr}/>} />

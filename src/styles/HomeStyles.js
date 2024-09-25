@@ -12,8 +12,8 @@ const bobble = keyframes`
 
 export const HomePage = styled.div`
   position: relative;
-  background-image: url(${LogoJpg});
-  background-color: #07080a;
+  /* background-image: url(${LogoJpg}); */
+  background-color: #000000;
   background-position:center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -56,9 +56,10 @@ export const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* height: 650px; */
   width: 100%;
   gap: 15px;
-  margin: 4rem 0rem 55rem 0rem;
+  margin: 4rem 0rem 0rem 0rem;
 
   @media screen and (min-width: 650px) {
     max-width: 850px;
@@ -70,7 +71,6 @@ export const ContentContainer = styled.div`
 `;
 
 export const ReviewsContainer = styled.div`
-  position: absolute;
   bottom: 0;
   z-index: 2;
   margin: 0em 0em 27em 0em;
@@ -81,7 +81,7 @@ export const ReviewsContainer = styled.div`
   overflow: visible;
   overflow-x: auto;
   width: 100%;
-  height:700px;
+  height:600px;
   padding: 1rem 0;
   box-sizing: border-box;
 

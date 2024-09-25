@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
 export const BiographySectionWrapper = styled.div`
-  background-color: #07080a;
-  padding: 40px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,16 +12,18 @@ export const BiographySectionContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 540px;
   width: 100%;
   max-width: 1200px;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
-  background: linear-gradient(to bottom, #07080a, #333333);
-  padding: 10px;
+  background: linear-gradient(to bottom, #000000, #333333);
+
+  /* padding: 10px; */
 
     @media screen and (min-width: 750px) {
         flex-direction: row;
-        background: linear-gradient(to right, #07080a, #404040);
+        background: linear-gradient(to right, #000000, #333333);
 
     }
 `;

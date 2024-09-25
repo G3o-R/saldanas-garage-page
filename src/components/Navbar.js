@@ -37,9 +37,9 @@ export default function Navbar() {
 
     return (
         <NavbarContainer className={effect}>
-            <BannerContainer>
+            {/* <BannerContainer>
                 <Banner>Keeping Your Car Cool & You Looking Cooler</Banner>
-            </BannerContainer>
+            </BannerContainer> */}
             <NavLinks>
                 <NavLink to="/">Home</NavLink>
                 <NavLink as="button" onClick={() => handleScrollToSection("about")}>

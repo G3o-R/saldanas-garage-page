@@ -1,22 +1,23 @@
 import { 
-    InfoCardContainer,
+    InfoCardWrapper,
     TitleCardContainer,
-    TextBox
+    TextBox,
+    InfoCardContainer
  } from "../styles/InfoCardStyles"
 
 export default function InfoCard({infoObj}){
     const {title, text} = infoObj
 
-    return(
-        <InfoCardContainer className="info-card-container">
-            <TitleCardContainer>
-                <h1>{title}</h1>
-            </TitleCardContainer>
-            <TextBox>
-                <p>
-                {text}
-                </p>
-            </TextBox>
-    </InfoCardContainer>
-    )
+    return (
+      <InfoCardWrapper className="info-card-container">
+        <InfoCardContainer>
+          <TitleCardContainer>
+            <h1>{title}</h1>
+          </TitleCardContainer>
+          <TextBox>
+            <p>{text}</p>
+          </TextBox>
+        </InfoCardContainer>
+      </InfoCardWrapper>
+    );
 }
