@@ -12,8 +12,8 @@ const bobble = keyframes`
 
 export const HomePage = styled.div`
   position: relative;
-  /* background-image: url(${LogoJpg}); */
-  background-color: #000000;
+  background-color: #0a0a0a;
+  /* background-color: #f7f7f7; */
   background-position:center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -51,22 +51,31 @@ export const LogoContainer = styled.div`
     object-fit: cover;
   }
 `;
-
+// don't forget to mess with media queries here so that it looks good with the images
 export const ContentContainer = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* height: 650px; */
   width: 100%;
   gap: 15px;
   margin: 4rem 0rem 0rem 0rem;
+  background: linear-gradient(to bottom, #0a0a0a 99%, #adadad 100%);
+
+
+  .swiper{
+    height: 100%;
+    width: 100%;
+    
+  }
+  
 
   @media screen and (min-width: 650px) {
     max-width: 850px;
   }
 
   @media screen and (min-width: 950px){
-    max-width: 1150px;
+    max-width: 1650px;
   }
 `;
 

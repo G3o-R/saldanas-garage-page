@@ -12,25 +12,22 @@ export const BiographySectionContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 540px;
   width: 100%;
-  max-width: 1200px;
+  height: 100%;
   border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
-  background: linear-gradient(to bottom, #000000, #333333);
-
-  /* padding: 10px; */
-
-    @media screen and (min-width: 750px) {
-        flex-direction: row;
-        background: linear-gradient(to right, #000000, #333333);
+  /* background: linear-gradient(to bottom, #0a0a0a, #333333); */
+  
+  @media screen and (min-width: 750px) {
+    flex-direction: row;
+    /* background: linear-gradient(to right,  #0a0a0a, 80%, #333333); */
+    height: 540px;
 
     }
 `;
 
 export const ImageContainer = styled.div`
   width: 70%;
-  max-width: 400px;
+  max-width: 300px;
   height: auto;
   margin: 15px;
   aspect-ratio: 1/1;

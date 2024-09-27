@@ -3,8 +3,9 @@ import InfoCard from "./InfoCard"
 import {
     CardsWrapper,
     CardsContainer,
-    StyledFlexColumnWrapper
-} from "../styles/InfoCardsStyles"
+    StyledFlexColumnWrapper,
+    ImageContainer
+} from "../styles/ContentCardsStyles"
 
 import { ReactComponent as ShieldSVG } from "../Images/svgs/Shield.svg"
 import { ReactComponent as StableSVG } from "../Images/svgs/Stable.svg"
@@ -16,7 +17,7 @@ import { ReactComponent as SunProtectionSVG } from "../Images/svgs/SunProtection
 import { ReactComponent as SunShieldSVG } from "../Images/svgs/SunShield.svg"
 
 
-export function InfoCardProNano(){
+export function ContentCardProNano(){
 
     return(
         <CardsWrapper>
@@ -27,6 +28,9 @@ export function InfoCardProNano(){
                   text: "Pro-nano is Geoshield's most advanced spectrally selective window film designed for automotive applications. The film is virtually clear and haze free but blocks a significant amount of UV and heat. IR blocking ceramic nano particles, in combination with UV stabilized film provides long lasting protection to your home, office or vehicle.",
                 }}
               />
+              <ImageContainer className="image-1">
+                <img src="/car3.webp" alt="example tint" />
+              </ImageContainer>
               <StyledFlexColumnWrapper>
                 <span>
                   <ShieldSVG /> Lifetime Warranty
@@ -53,12 +57,15 @@ export function InfoCardProNano(){
                   <SunShieldSVG /> High IR Rejection
                 </span>
               </StyledFlexColumnWrapper>
+              <ImageContainer className="image-2">
+                <img src="/car3.webp" alt="example tint" />
+              </ImageContainer>
             </CardsContainer>
           </CardsWrapper>
     )
 }
 
-export function InfoCardC2Carbon(){
+export function ContentCardC2Carbon(){
     return(
         <CardsWrapper>
             <CardsContainer>
@@ -68,6 +75,9 @@ export function InfoCardC2Carbon(){
                   text: "C2 Carbon is an advanced nano carbon film produced using the latest technology in the industry. Using this technology, we created a film that not only looks great, it performs great too. In addition, this process has allowed us to bring premium looks and performance to you at a mid-range price point.",
                 }}
               />
+              <ImageContainer className="image-1">
+                <img src="/car3.webp" alt="example tint" />
+              </ImageContainer>
               <StyledFlexColumnWrapper>
                 <span>
                   <ShieldSVG /> Lifetime Warranty
@@ -94,6 +104,9 @@ export function InfoCardC2Carbon(){
                   <SunShieldSVG /> High TSER Rejection
                 </span>
               </StyledFlexColumnWrapper>
+              <ImageContainer className="image-2">
+                <img src="/car3.webp" alt="example tint" />
+              </ImageContainer>
             </CardsContainer>
           </CardsWrapper>
     )

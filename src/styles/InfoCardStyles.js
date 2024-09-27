@@ -3,14 +3,17 @@ import styled from "styled-components";
 export const InfoCardWrapper = styled.div`
     width: 100%;
     max-width: 21rem;
-    height: 100%;
-    background: #202020;
+    /* background: #202020; */
     border-radius: 15px;
     text-align: center;
     /* margin: 5px; */
     @media screen and (max-width: 800px) {
         padding: 20px;
     }
+    
+    @media screen and (min-width: 768px) {
+        height: 100%;
+        }
     `;
 
 export const InfoCardContainer = styled.div`
@@ -26,7 +29,9 @@ export const TitleCardContainer = styled.div`
         color: #f7f7f7;
         font-family: SourceSerif4,'Roboto', sans-serif;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-        /* padding: 0px 10px 0px 10px; */
+        @media screen and (max-width: 768px) {
+            margin: 0;
+        }
     }
     `;
 
