@@ -24,6 +24,7 @@ export const Navigator = styled.section`
         font-weight: 700px;
         color: #adadad;
         transition: color 0.3s ease-in-out;
+        font-family: SourceSerif4;
         &:hover{
             color: #f7f7f7;
         }
