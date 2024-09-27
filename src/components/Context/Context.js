@@ -12,9 +12,7 @@ function ContextProvider({ children }) {
             .then((res) => res.json())
             .then((data) => {
                 setPageComponents(data);
-                // setTimeout(() => {
                     setIsLoading(false);
-                // },3000);
             });
     }, []);
 

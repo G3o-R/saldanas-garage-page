@@ -26,6 +26,7 @@ function Home({ pageComponents }) {
     const { images_arr, reviews } = pageComponents;
     const [selectedReview, setSelectedReview] = useState(null);
     const [selectedReviewPosition, setSelectedReviewPosition] = useState(null);
+    const [currentIndex, setCurrentIndex] = useState(0);
     const swiperRef = useRef(null);
     const isLargeScreen = useMediaQuery({ query: '(min-width: 768px)' });
 
@@ -37,6 +38,11 @@ function Home({ pageComponents }) {
         if (swiperRef.current && swiperRef.current.slideTo) {
             swiperRef.current.slideTo(index, 0);
         }
+    }
+
+    function handleSlideChange(swiper){
+        setCurrentIndex(swiper.activeIndex)
+        console.log(currentIndex)
     }
 
     const reviewsToDisplay = reviews.map((review) => (
@@ -60,6 +66,7 @@ function Home({ pageComponents }) {
                     slidesPerView={1}
                     className="my-swiper-here"
                     onSwiper={(swiperInstance) => { swiperRef.current = swiperInstance; }}
+                    onSlideChange={handleSlideChange}
                 >
                     <SwiperSlide> <BiographySectionTwo /> </SwiperSlide>
                     <SwiperSlide> <ContentCardProNano key="proNano" /> </SwiperSlide>

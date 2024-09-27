@@ -13,18 +13,9 @@ const bobble = keyframes`
 export const HomePage = styled.div`
   position: relative;
   background-color: #0a0a0a;
-  /* background-color: #f7f7f7; */
-  background-position:center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-blend-mode: lighten;
   overflow-x: hidden;
   width: 100%;
   height: 100%;
-  box-shadow: 
-    0 0 20px rgba(255, 255, 255, 0.2),
-    inset 0 0 10px rgba(255, 255, 255, 0.1),
-    inset 0 0 20px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
   align-items: center;
