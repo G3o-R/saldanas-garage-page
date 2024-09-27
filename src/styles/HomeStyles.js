@@ -77,6 +77,10 @@ export const ContentContainer = styled.div`
   @media screen and (min-width: 950px){
     max-width: 1650px;
   }
+
+  @media screen and (min-width: 1650px){
+    flex-direction: row;
+  }
 `;
 
 export const ReviewsContainer = styled.div`
