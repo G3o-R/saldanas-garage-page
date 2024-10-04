@@ -2,6 +2,7 @@ import {
     ContentContainer,
     HomePage,
     ReviewsContainer,
+    SwiperOverlay,
 } from "../../styles/HomeStyles";
 import { useState, useRef } from "react";
 import ImageCarousel from "../ImageCarousel";
@@ -29,6 +30,7 @@ function Home({ pageComponents }) {
     const [currentIndex, setCurrentIndex] = useState(0);
     const swiperRef = useRef(null);
     const isLargeScreen = useMediaQuery({ query: '(min-width: 768px)' });
+    const [slidesLength, setSlidesLength] = useState(0)
 
     function handleSetReviewToDisplay(selectedReview, position) {
         setSelectedReview(selectedReview);
@@ -40,10 +42,21 @@ function Home({ pageComponents }) {
         }
     }
 
+    const handleSwiperInit = (swiper) => {
+        swiperRef.current = swiper;
+        setSlidesLength(swiper.slides.length);
+    };
+
     function handleSlideChange(swiper){
         setCurrentIndex(swiper.activeIndex)
-        console.log(currentIndex)
     }
+
+    const glowDirection = 
+    currentIndex === 0
+    ? "glow-right" 
+    : currentIndex === slidesLength - 1
+    ? "glow-left" 
+    : "glow";
 
     const reviewsToDisplay = reviews.map((review) => (
         <ReviewCard 
@@ -61,17 +74,19 @@ function Home({ pageComponents }) {
             <ImageCarousel images_arr={images_arr} />
             <ContentContainer id="content-column" name="about">
                 {isLargeScreen ? <ContentNav handleSlideTo={handleSlideTo}/> : null}
+                {!isLargeScreen ?<p className="try-swiping"> Try Swiping</p> : null}
                 <Swiper
                     spaceBetween={0}
                     slidesPerView={1}
                     className="my-swiper-here"
-                    onSwiper={(swiperInstance) => { swiperRef.current = swiperInstance; }}
+                    onSwiper={handleSwiperInit}
                     onSlideChange={handleSlideChange}
                 >
                     <SwiperSlide> <BiographySectionTwo /> </SwiperSlide>
                     <SwiperSlide> <ContentCardProNano key="proNano" /> </SwiperSlide>
                     <SwiperSlide> <ContentCardC2Carbon key="c2Carbon" /> </SwiperSlide>
                 </Swiper>
+                <SwiperOverlay className={glowDirection}></SwiperOverlay>
             </ContentContainer>
             <ReviewsContainer name="reviews">{reviewsToDisplay}</ReviewsContainer>
             <Footer />

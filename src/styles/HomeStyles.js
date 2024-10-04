@@ -50,10 +50,14 @@ export const ContentContainer = styled.div`
   align-items: center;
   width: 100%;
   gap: 15px;
-  margin: 4rem 0rem 0rem 0rem;
+  padding: 3rem 0rem 0rem 0rem;
   background: linear-gradient(to bottom, #0a0a0a 99%, #adadad 100%);
 
-
+  .try-swiping{
+    margin: 0;
+    color: #333333;
+    font-family: Sanchez;
+  }
   .swiper{
     height: 100%;
     width: 100%;
@@ -74,10 +78,38 @@ export const ContentContainer = styled.div`
   }
 `;
 
-export const ReviewsContainer = styled.div`
+export const SwiperOverlay = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   bottom: 0;
-  z-index: 2;
-  margin: 0em 0em 27em 0em;
+  pointer-events: none;
+  z-index: 10;
+  transition: box-shadow 0.5s ease-in-out;    
+  
+  @media screen and (max-width: 768px) {
+    &.glow-right{
+      box-shadow: inset -20px -20px 20px rgba(200, 200, 200, 0.1);
+      /* border-right: 1px solid grey; */
+      
+    }
+    
+    &.glow-left {
+      box-shadow: inset 20px -20px 20px rgba(255, 255, 255, 0.1);
+    }
+    
+    &.glow {
+      box-shadow: inset 20px -20px 20px rgba(255, 255, 255, 0.1),
+      inset -20px -20px 20px rgba(255, 255, 255, 0.1);
+    }
+  }
+    `;
+    
+    export const ReviewsContainer = styled.div`
+    bottom: 0;
+    z-index: 2;
+    margin: 0em 0em 27em 0em;
   display: flex;
   gap: 15px;
   flex-direction: row;

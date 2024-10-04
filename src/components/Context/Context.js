@@ -7,8 +7,8 @@ function ContextProvider({ children }) {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        fetch("/.netlify/functions/getResources")
-        // fetch("http://localhost:3001/page_components")
+        // fetch("/.netlify/functions/getResources")
+        fetch("http://localhost:3001/page_components")
             .then((res) => res.json())
             .then((data) => {
                 setPageComponents(data);
