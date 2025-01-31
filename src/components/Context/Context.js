@@ -8,7 +8,6 @@ function ContextProvider({ children }) {
 
     useEffect(() => {
         fetch("/.netlify/functions/getResources")
-        // fetch("http://localhost:3001/page_components")
             .then((res) => res.json())
             .then((data) => {
                 setPageComponents(data);
