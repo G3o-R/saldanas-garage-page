@@ -56,3 +56,18 @@
   font-family: Parisienne;
   src: url(../../public/Parisienne-Regular.ttf);
 }
+
+@font-face {
+  font-family: Allura-Regular;
+  src: url("../../public/Allura-Regular.ttf");
+}
+
+@font-face {
+  font-family: FiraMono-Bold;
+  src: url("../../public//FiraMono-Bold.ttf");
+}
+
+@font-face {
+  font-family: FiraMono-Medium;
+  src: url("../../public//FiraMono-Medium.ttf");
+}
