@@ -1,24 +1,37 @@
 import styled from "styled-components";
 
-export  const FooterSection = styled.section`
-height: 31.25rem;
-background-color: #000;
-display: flex;
-justify-content: center;
+export const FooterSection = styled.section`
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem .5rem;
+  
+  @media screen and (min-width: 668px) {
+    height: 31.25rem;
+  }
 
-`;
+  `;
+
+export const FooterWrapper = styled.div`
+  height: 100%;
+  display: flex;
+  align-items: center;
+  `;
 
 export const FooterContainer = styled.div`
-max-width: 42rem;
-display: flex;
-flex-direction: row;
-align-items: center;
-justify-content: center;
+  max-width: 42rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
+  @media screen and (min-width: 668px) {
+    flex-direction: row;
+  }
 `;
 
 export const LogoWrapper = styled.div`
-
+  /* height: 100%; */
 `;
 
 export const LogoContainer = styled.div`
@@ -32,15 +45,17 @@ export const LogoContainer = styled.div`
     height: 100%;
     border-radius: 50%;
   }
-
 `;
 
-export const SocialsWrapper = styled.div`
-    max-width: 23rem;
-
+export const InfoWrapper = styled.div`
+  max-width: 23rem;
 `;
 
-export const SocialsContainer = styled.div`
-text-align: left;
+export const InfoContainer = styled.div`
+  text-align: left;
+`;
 
+export const SocialMediaContainer = styled.div`
+  display: flex;
+  gap: 1rem;
 `;
