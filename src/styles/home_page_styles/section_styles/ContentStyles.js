@@ -253,7 +253,9 @@ export const TextContainer = styled.div`
     line-height: 1.75rem;
     margin: 0;
     color: #ffffff;
-    padding-right: 50px;
+    @media screen and (max-width: 767px){
+      padding-right: 3.125rem;
+    }
     @media screen and (min-width: 425px) {
       line-height: 2rem;
     }
