@@ -27,7 +27,7 @@ export function Tints({ selectedService = "", handleServiceSelect, isLarge }) {
           className="service-name"
           onClick={() => handleServiceSelect("Tints")}
         >
-          <h2>Tints</h2>
+          <h2 className={selectedService === "Tints" ? "active" : ""}>Tints</h2>
         </ServiceNameContainer>
 
         {isLarge ? (
@@ -92,7 +92,7 @@ export function Wraps({ selectedService, handleServiceSelect, isLarge }) {
           className="service-name"
           onClick={() => handleServiceSelect("Wraps")}
         >
-          <h2>Wraps</h2>
+          <h2 className={selectedService === "Wraps" ? "active" : ""}>Wraps</h2>
         </ServiceNameContainer>
         {isLarge ? (
           <ServiceDescription className="service-description">
@@ -123,7 +123,7 @@ export function Decals({ selectedService, handleServiceSelect, isLarge }) {
           className="service-name"
           onClick={() => handleServiceSelect("Decals")}
         >
-          <h2>Decals</h2>
+          <h2 className={selectedService === "Decals" ? "active" : ""}>Decals</h2>
         </ServiceNameContainer>
         {isLarge ? (
           <ServiceDescription className="service-description">
@@ -158,7 +158,7 @@ export function LEDS({ selectedService, handleServiceSelect, isLarge }) {
           className="service-name"
           onClick={() => handleServiceSelect("LEDS")}
         >
-          <h2>LEDS</h2>
+          <h2 className={selectedService === "LEDS" ? "active" : ""}>LEDS</h2>
         </ServiceNameContainer>
         {isLarge ? (
           <ServiceDescription className="service-description">

@@ -198,8 +198,15 @@ export const InfoHeaderContainer = styled.div`
     }
 
     h2 {
+      cursor: pointer;
       font-weight: bold;
       margin: 0 0.25rem;
+      color: #999999;
+      transition: color 0.3s ease-in-out;
+
+      &.active{
+        color: #ffffff;
+      }
     }
   }
 `;
@@ -244,7 +251,6 @@ export const TextContainer = styled.div`
   width: 100%;
   p {
     line-height: 1.75rem;
-    /* line-height: 2rem; */
     margin: 0;
     color: #ffffff;
     padding-right: 50px;
@@ -307,10 +313,3 @@ export const NavButton = styled.button`
     z-index: 10;
   }
 `;
-
-// /* next-btn */
-
-// position: absolute;
-
-// /* Note: backdrop-filter has minimal browser support */
-// border-radius: 999px;

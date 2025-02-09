@@ -15,10 +15,17 @@ export const ServiceContainer = styled.div`
 `;
 
 export const ServiceNameContainer = styled.div`
+cursor: pointer;
   h2 {
     margin: 0;
     line-height: 3rem;
     width: 100%;
+    color: #999999;
+    transition: color 0.3s ease-in-out;
+
+      &.active{
+        color: #ffffff;
+      }
   }
 `;
 
