@@ -12,6 +12,7 @@ import {
   InfoContainer,
   TextContainer,
   GuaranteesContainer,
+  NavButton,
 } from "../../styles/home_page_styles/section_styles/ContentStyles";
 import { useState, useRef } from "react";
 import { Tints, Wraps, Decals, LEDS } from "../ServiceComponents";
@@ -74,12 +75,18 @@ export default function Content() {
         </BackgroundContainer>
       </BackgroundWrapper>
       <ContentContainer className="content-container">
-        <ServiceGridWrapper className="service-grid-wrapper">
-          <ServiceGridContainer className="service-grid-container">
-            <Tints />
-            <Wraps />
-            <Decals />
-            <LEDS />
+        <ServiceGridWrapper
+          className="service-grid-wrapper"
+          id="services-wrapper"
+        >
+          <ServiceGridContainer
+            className="service-grid-container"
+            id="services"
+          >
+            <Tints selectedService={selectedService} isLarge={isLarge} />
+            <Wraps selectedService={selectedService} isLarge={isLarge} />
+            <Decals selectedService={selectedService} isLarge={isLarge} />
+            <LEDS selectedService={selectedService} isLarge={isLarge} />
           </ServiceGridContainer>
         </ServiceGridWrapper>
         {/* service info related elements */}
@@ -107,7 +114,7 @@ export default function Content() {
                   onSwiper={handleSwiperInit}
                   onSlideChange={handleSlideChange}
                   centeredSlides={isLarge ? false : true}
-
+                  className="my-slider"
                 >
                   <SwiperSlide>
                     <TextContainer className="text-container">
@@ -151,6 +158,8 @@ export default function Content() {
                       </ul>
                     </GuaranteesContainer>
                   </SwiperSlide>
+                  <NavButton className="swiper-button-prev"></NavButton>
+                  <NavButton className="swiper-button-next"></NavButton>
                 </Swiper>
               </InfoContainer>
             </InfoWrapper>

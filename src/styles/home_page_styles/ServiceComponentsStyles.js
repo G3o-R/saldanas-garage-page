@@ -18,15 +18,27 @@ export const ServiceNameContainer = styled.div`
   h2 {
     margin: 0;
     line-height: 3rem;
+    width: 100%;
   }
 `;
 
 export const ServiceDescription = styled.div`
   @media screen and (max-width: 767px) {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+    align-items: start;
+    padding-left: .625rem;
+    p{
+      margin: 0;
+    }
+    svg{
+      width: 70%;
+    }
   }
-  display: contents;
   text-align: left;
+  display: contents;
   p {
     max-width: 14.75rem;
     left: calc(50% - 237px / 2 + 0.5px);

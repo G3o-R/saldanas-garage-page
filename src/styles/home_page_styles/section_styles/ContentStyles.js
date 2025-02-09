@@ -7,6 +7,8 @@ export const ContentSection = styled.section`
   position: relative;
   justify-content: flex-end;
   overflow: hidden;
+
+
   @media screen and (min-width: 1260px) {
     justify-content: center;
   }
@@ -58,30 +60,47 @@ export const BackgroundContainer = styled.div`
 
 export const ContentContainer = styled.div`
   position: relative;
-  padding-top: 2rem;
+  padding-top: 0.5rem;
   right: 0;
   z-index: 2;
   max-width: 1560px;
-  width: 100%;
+  width: 100%; 
+  
+
+  @media screen and (min-width: 768px) {
+    padding-top: 2rem;
+    padding-left: 0;
+  }
 `;
 
 export const ServiceGridWrapper = styled.div`
   width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: right;
+  @media screen and (max-width: 767px) {
+  padding-left: clamp(1rem, 20vw, 5.25rem);
+}
 `;
 
 export const ServiceGridContainer = styled.div`
   display: grid;
-  column-gap: .75rem;
+  column-gap: 0.75rem;
   grid-template-columns: repeat(2, auto);
   grid-template-rows: repeat(2, auto);
-  /* justify-content: center; */
-  justify-content: end;
-  margin-right: 1.25rem;
+  justify-content: start;
   width: auto;
-  
+
+  & > *:nth-child(5) {
+    grid-column: 1 / 3;
+    justify-self: center;
+  }
+
   @media screen and (min-width: 768px) {
     grid-template-columns: repeat(2, 20rem);
     row-gap: 2.625rem;
+    justify-content: end;
     & > * {
       position: relative;
     }
@@ -110,7 +129,11 @@ export const ServiceGridContainer = styled.div`
 export const ServiceInfoWrapper = styled.div`
   display: flex;
   padding: 0 1.25rem;
-  justify-content: center;
+  /* justify-content: center; */
+  @media screen and (max-width: 767px) {
+  padding-left: clamp(1rem, 20vw, 5.25rem);
+}
+
 
   @media screen and (min-width: 768px) and (max-width: 1259px) {
     justify-content: flex-start;
@@ -158,20 +181,20 @@ export const InfoHeaderContainer = styled.div`
     display: flex;
     flex-direction: column;
     text-align: left;
-    @media screen and (min-width: 768px){
+    @media screen and (min-width: 768px) {
       gap: 0.5rem;
       height: 5.5rem;
       align-items: baseline;
       flex-direction: row;
-  }
+    }
 
     h1 {
       font-style: italic;
       height: 4.5rem;
       margin: 0;
-      @media screen and (min-width: 768px){
+      @media screen and (min-width: 768px) {
         margin: 0 0.75rem;
-    }
+      }
     }
 
     h2 {
@@ -194,14 +217,23 @@ export const InfoContainer = styled.div`
   .swiper {
     width: 100%;
     height: 100%;
+    overflow: visible;
   }
 
   .swiper-slide {
     position: relative;
     align-items: center;
     z-index: 1;
+    transition: opacity 0.5s ease-in-out;
   }
 
+  .swiper-slide-next, .swiper-slide-prev{
+    opacity: 0;
+  }
+
+  .swiper-slide-active{
+    opacity: 1;
+  }
 `;
 
 export const TextContainer = styled.div`
@@ -209,9 +241,14 @@ export const TextContainer = styled.div`
   max-width: 20.75rem;
   width: 100%;
   p {
-    line-height: 2rem;
+    line-height: 1.75rem;
+    /* line-height: 2rem; */
     margin: 0;
     color: #ffffff;
+    padding-right: 50px;
+    @media screen and (min-width: 425px) {
+      line-height: 2rem;
+    }
   }
 `;
 
@@ -228,7 +265,7 @@ export const GuaranteesContainer = styled.div`
     margin: 0;
     gap: 1.25rem;
     padding: 0;
-    @media screen and (min-width: 768px){
+    @media screen and (min-width: 768px) {
       padding-left: 2.5rem;
     }
   }
@@ -246,3 +283,32 @@ export const GuaranteesContainer = styled.div`
     color: white;
   }
 `;
+
+export const NavButton = styled.button`
+  background-color: rgba(10, 10, 10, 0.2);
+  border: none;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  height: 50px;
+  width: 50px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(3.4px);
+  &::after {
+    color: #c2c2c2;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  &.swiper-button-prev{
+    margin-left: -50px;
+    position: absolute;
+    z-index: 10;
+  }
+`;
+
+// /* next-btn */
+
+// position: absolute;
+
+// /* Note: backdrop-filter has minimal browser support */
+// border-radius: 999px;
