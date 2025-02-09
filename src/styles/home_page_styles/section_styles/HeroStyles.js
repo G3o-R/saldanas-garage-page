@@ -9,12 +9,17 @@ export const HeroSection = styled.section`
   overflow: hidden;
   display: flex;
   justify-content: center;
-  /* align-items: center; */
+
+  background-image: url(${heroSmall});
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media screen and (min-width: 768px) {
+    background-image: url(${heroMed});
+  }
 
   @media screen and (min-width: 1080px) {
     background-image: url(${heroLarge});
-    background-repeat: no-repeat;
-    background-size: cover;
   }
 `;
 
@@ -32,6 +37,7 @@ export const TextContainer = styled.div`
 
   h1 {
     max-width: 20.625rem;
+    line-height: 4.5rem;
   }
 `;
 export const LogoContainer = styled.div`
@@ -47,9 +53,20 @@ export const LogoContainer = styled.div`
   }
 `;
 
-export const ImageWrapper = styled.div``;
+export const ImageWrapper = styled.div`
+  margin-top: auto;
+
+  margin-left: -240px;
+  @media screen and (min-width: 768px) {
+  }
+  @media screen and (min-width: 1080px) {
+    margin-left: 0;
+  }
+`;
 
 export const ImageContainer = styled.div`
+  height: auto;
   img {
+    height: auto;
   }
 `;
