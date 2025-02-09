@@ -6,6 +6,7 @@ export const ContentSection = styled.section`
   width: 100%;
   position: relative;
   justify-content: flex-end;
+  overflow: hidden;
   @media screen and (min-width: 1260px) {
     justify-content: center;
   }
@@ -23,10 +24,29 @@ export const BackgroundContainer = styled.div`
   width: 100%;
   height: 100%;
 
-  .ribbons {
+  .ribbons-large,
+  .ribbons-medium {
     position: absolute;
     left: 0;
     top: 0;
+  }
+
+  .ribbons-large {
+    opacity: 0;
+    @media screen and (min-width: 768px) {
+      width: calc(100% - 60vw);
+      max-width: 34.375rem;
+      opacity: 1;
+    }
+  }
+
+  .ribbons-medium{
+    opacity: 0;
+    @media screen and (max-width: 767px) {
+      opacity: 1;
+      width: calc(100% - 60vw);
+      max-width: 16rem;
+    }
   }
 
   .scratches {
@@ -54,8 +74,12 @@ export const ServiceGridContainer = styled.div`
   grid-template-columns: repeat(2, 20rem);
   grid-template-rows: repeat(2, 1fr);
   row-gap: 2.625rem;
-  justify-content: end;
+  justify-content: center;
   width: auto;
+
+  @media screen and (min-width: 768px) {
+    justify-content: end;
+  }
 
   & > * {
     position: relative;
@@ -73,7 +97,7 @@ export const ServiceGridContainer = styled.div`
   }
 
   @media screen and (min-width: 1260px) {
-    grid-template-columns: repeat(3, 20rem);
+    grid-template-columns: repeat(3, minmax(15rem, 20rem));
     grid-template-rows: repeat(2, 1fr);
     & > *:nth-last-child(1) {
       grid-column: 3 / 4;
@@ -84,7 +108,11 @@ export const ServiceGridContainer = styled.div`
 export const ServiceInfoWrapper = styled.div`
   display: flex;
   padding: 0 1.25rem;
-  justify-content: flex-start;
+  justify-content: center;
+
+  @media screen and (min-width: 768px) and (max-width: 1259px) {
+    justify-content: flex-start;
+  }
   @media screen and (min-width: 1260px) {
     justify-content: flex-end;
   }

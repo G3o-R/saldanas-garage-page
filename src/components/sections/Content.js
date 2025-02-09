@@ -16,6 +16,7 @@ import {
 import { Tints, Wraps, Decals, LEDS } from "../ServiceComponents";
 
 import SilverRibbons from "../../images/content-section-silver-ribbon.jpg";
+import SilverRibbonsM from "../../images/silver-ribbons-M.jpg";
 import Scratches from "../../images/content-section-scratch-marks.jpg";
 
 import { ReactComponent as LifeTimeWarranty } from "../../images/serviceSVGs/shieldCheck.svg";
@@ -35,13 +36,18 @@ export default function Content() {
           <img
             src={SilverRibbons}
             alt="background image of ribbons"
-            className="ribbons"
+            className="ribbons-large"
           />
-          {/* <img
+          <img
+            src={SilverRibbonsM}
+            alt="background image of ribbons"
+            className="ribbons-medium"
+          />
+          <img
             src={Scratches}
             alt="background image of scratch marks"
             className="scratches"
-          /> */}
+          />
         </BackgroundContainer>
       </BackgroundWrapper>
       <ContentContainer className="content-container">
