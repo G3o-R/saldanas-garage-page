@@ -47,3 +47,35 @@ export const ServiceDescription = styled.div`
     margin-top: 0;
   }
 `;
+
+export const GuaranteesContainer = styled.div`
+  width: 100%;
+  max-width: 20.75rem;
+  @media screen and (min-width: 1260px) {
+    max-width: 31.25rem;
+  }
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    gap: 1.25rem;
+    padding: 0;
+    @media screen and (min-width: 768px) {
+      padding-left: 2.5rem;
+    }
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-align: left;
+  }
+
+  svg {
+    width: 3.125;
+    height: 3.125;
+    color: white;
+  }
+`;

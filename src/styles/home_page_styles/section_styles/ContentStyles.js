@@ -228,7 +228,9 @@ export const InfoContainer = styled.div`
   }
 
   .swiper-slide-next, .swiper-slide-prev{
-    opacity: 0;
+    @media screen and (max-width: 767px){
+      opacity: 0;
+    }
   }
 
   .swiper-slide-active{

@@ -15,15 +15,13 @@ import {
   NavButton,
 } from "../../styles/home_page_styles/section_styles/ContentStyles";
 import { useState, useRef } from "react";
-import { Tints, Wraps, Decals, LEDS } from "../ServiceComponents";
-import { ReactComponent as LifeTimeWarranty } from "../../images/serviceSVGs/shieldCheck.svg";
-import { ReactComponent as Stable } from "../../images/serviceSVGs/stable.svg";
-import { ReactComponent as Gradients } from "../../images/serviceSVGs/gradient.svg";
-import { ReactComponent as PaintDrop } from "../../images/serviceSVGs/paintDrop.svg";
-import { ReactComponent as MagnifyingGlass } from "../../images/serviceSVGs/magnifyingGlass.svg";
-import { ReactComponent as Satellite } from "../../images/serviceSVGs/satellite.svg";
-import { ReactComponent as UvRejection } from "../../images/serviceSVGs/UVRejection.svg";
-import { ReactComponent as IRRejection } from "../../images/serviceSVGs/IRRejection.svg";
+import {
+  Tints,
+  TintsGuarantees,
+  Wraps,
+  Decals,
+  LEDS,
+} from "../ServiceComponents";
 import SilverRibbons from "../../images/content-section-silver-ribbon.jpg";
 import SilverRibbonsM from "../../images/silver-ribbons-M.jpg";
 import Scratches from "../../images/content-section-scratch-marks.jpg";
@@ -38,7 +36,8 @@ export default function Content() {
   const swiperRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [slidesLength, setSlidesLength] = useState(0);
-  const [selectedService, setSelectedService] = useState("tints");
+  const [selectedService, setSelectedService] = useState("Tints");
+  const [selectedOption, setSelectedOption] = useState("Pro-Nano");
 
   const isLarge = useMediaQuery({
     query: "(min-width: 768px)",
@@ -52,6 +51,63 @@ export default function Content() {
   const handleSlideChange = (swiper) => {
     setCurrentIndex(swiper.activeIndex);
   };
+
+  const services = {
+    "Tints": {
+      "Pro-Nano": {
+        description:
+          "Pro-nano is Geoshield's most advanced spectrally selective window film designed for automotive applications. The film is virtually clear and haze free but blocks a significant amount of UV and heat. IR blocking ceramic nano particles, in combination with UV stabilized film provides long lasting protection to your home, office or vehicle. ",
+        guarantees: <TintsGuarantees />,
+      },
+      "C2 Carbon": {
+        description:
+          "C2 Carbon is an advanced nano carbon film produced using the latest technology in the industry. Using this technology, we created a film that not only looks great, it performs great too. In addition, this process has allowed us to bring premium looks and performance to you at a mid-range price point.",
+        guarantees: <TintsGuarantees />,
+      },
+    },
+    "Wraps": {
+      "PPF": {
+        description:
+          "This is just some filler text until I can actually get information on the benefits of PPF and it's protective properties, blah blah words words and even way more words",
+        guarantees: <TintsGuarantees />,
+      },
+      "Vinyl": {
+        description:
+          "lorem ipsum tacos gummy bears I want more coffee the fitness gram pacer test is an anerobic if you or your loved one was diagnosed with mesothelioma you be qualified for I like trains",
+        guarantees: <TintsGuarantees />,
+      },
+    },
+    "Decals": {
+      "Promotions": {
+        description:
+          "show of your business and stuff",
+        guarantees: <TintsGuarantees />,
+      },
+      "racing stripes": {
+        description:
+          "It won't make you drive faster, but it'll make you look cooler going 0 to 60 eventually",
+        guarantees: <TintsGuarantees />,
+      },
+    },
+    "LEDS": {
+      "Interior": {
+        description:
+          "Yall ever watch that movie Tron? It'll make you feel that bro, trust",
+        guarantees: <TintsGuarantees />,
+      },
+      "Exterior": {
+        description:
+          "They're like interior lights but on the outside",
+        guarantees: <TintsGuarantees />,
+      },
+    },
+  };
+
+  function handleServiceSelect(serviceName) {
+    setSelectedService(serviceName);
+    const firstOption = Object.keys(services[serviceName])[0];
+    setSelectedOption(firstOption);
+  }
 
   return (
     <ContentSection className="content-section">
@@ -83,21 +139,42 @@ export default function Content() {
             className="service-grid-container"
             id="services"
           >
-            <Tints selectedService={selectedService} isLarge={isLarge} />
-            <Wraps selectedService={selectedService} isLarge={isLarge} />
-            <Decals selectedService={selectedService} isLarge={isLarge} />
-            <LEDS selectedService={selectedService} isLarge={isLarge} />
+            <Tints
+              selectedService={selectedService}
+              handleServiceSelect={handleServiceSelect}
+              isLarge={isLarge}
+            />
+            <Wraps
+              selectedService={selectedService}
+              handleServiceSelect={handleServiceSelect}
+              isLarge={isLarge}
+            />
+            <Decals
+              selectedService={selectedService}
+              handleServiceSelect={handleServiceSelect}
+              isLarge={isLarge}
+            />
+            <LEDS
+              selectedService={selectedService}
+              handleServiceSelect={handleServiceSelect}
+              isLarge={isLarge}
+            />
           </ServiceGridContainer>
         </ServiceGridWrapper>
-        {/* service info related elements */}
-
         <ServiceInfoWrapper className="service-info-wrapper">
           <ServiceInfoContainer className="service-info-container">
             <InfoHeaderContainer className="info-header-container">
               <span>
-                <h1>Tints:</h1>
-                <h2>Pro-Nano</h2>
-                <h2>C2 Carbon</h2>
+                <h1>{selectedService}:</h1>
+                {Object.keys(services[selectedService]).map((option) => (
+                  <h2
+                    key={option}
+                    className={selectedOption === option ? "active" : ""}
+                    onClick={() => setSelectedOption(option)}
+                  >
+                    {option}
+                  </h2>
+                ))}
               </span>
             </InfoHeaderContainer>
             <InfoWrapper className="info-wrapper">
@@ -119,44 +196,12 @@ export default function Content() {
                   <SwiperSlide>
                     <TextContainer className="text-container">
                       <p>
-                        C2 Carbon is an advanced nano carbon film produced using
-                        the latest technology in the industry. Using this
-                        technology, we created a film that not only looks great,
-                        it performs great too. In addition, this process has
-                        allowed us to bring premium looks and performance to you
-                        at a mid-range price point.
+                        {services[selectedService][selectedOption].description}
                       </p>
                     </TextContainer>
                   </SwiperSlide>
                   <SwiperSlide>
-                    <GuaranteesContainer className="">
-                      <ul>
-                        <li>
-                          <LifeTimeWarranty /> Lifetime Warranty
-                        </li>
-                        <li>
-                          <Stable /> Color Stable
-                        </li>
-                        <li>
-                          <Gradients /> Matches Most Factory Tint
-                        </li>
-                        <li>
-                          <PaintDrop /> Deep Dyed + Ceramic Technology
-                        </li>
-                        <li>
-                          <MagnifyingGlass /> High Optical Clarity
-                        </li>
-                        <li>
-                          <Satellite /> No Signal Interferance
-                        </li>
-                        <li>
-                          <UvRejection /> 99% UV Rejection
-                        </li>
-                        <li>
-                          <IRRejection /> High IR Rejection
-                        </li>
-                      </ul>
-                    </GuaranteesContainer>
+                    {services[selectedService][selectedOption].guarantees}
                   </SwiperSlide>
                   <NavButton className="swiper-button-prev"></NavButton>
                   <NavButton className="swiper-button-next"></NavButton>
@@ -165,7 +210,6 @@ export default function Content() {
             </InfoWrapper>
           </ServiceInfoContainer>
         </ServiceInfoWrapper>
-        {/* end of service info related elements */}
       </ContentContainer>
     </ContentSection>
   );
