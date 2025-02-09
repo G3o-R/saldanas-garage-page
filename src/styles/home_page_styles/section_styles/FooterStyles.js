@@ -48,7 +48,11 @@ export const LogoContainer = styled.div`
 `;
 
 export const InfoWrapper = styled.div`
+  max-width: 18rem;
+
+  @media screen and (min-width: 668px) {
   max-width: 23rem;
+}
 `;
 
 export const InfoContainer = styled.div`

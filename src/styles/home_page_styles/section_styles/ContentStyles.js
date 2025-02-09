@@ -40,7 +40,7 @@ export const BackgroundContainer = styled.div`
     }
   }
 
-  .ribbons-medium{
+  .ribbons-medium {
     opacity: 0;
     @media screen and (max-width: 767px) {
       opacity: 1;
@@ -71,29 +71,31 @@ export const ServiceGridWrapper = styled.div`
 
 export const ServiceGridContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, 20rem);
-  grid-template-rows: repeat(2, 1fr);
-  row-gap: 2.625rem;
-  justify-content: center;
+  column-gap: .75rem;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
+  /* justify-content: center; */
+  justify-content: end;
+  margin-right: 1.25rem;
   width: auto;
-
+  
   @media screen and (min-width: 768px) {
-    justify-content: end;
-  }
+    grid-template-columns: repeat(2, 20rem);
+    row-gap: 2.625rem;
+    & > * {
+      position: relative;
+    }
 
-  & > * {
-    position: relative;
-  }
-
-  & > *::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 0.75rem;
-    height: 100%;
-    background: url(${divider}) no-repeat center center;
-    background-size: contain;
+    & > *::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 0.75rem;
+      height: 100%;
+      background: url(${divider}) no-repeat center center;
+      background-size: contain;
+    }
   }
 
   @media screen and (min-width: 1260px) {
@@ -123,6 +125,7 @@ export const ServiceInfoContainer = styled.div`
   max-width: 54.75rem;
   flex-direction: column;
   gap: 1rem;
+  width: 100%;
 
   @media screen and (min-width: 1260px) {
     margin-right: 21rem;
@@ -153,13 +156,22 @@ export const InfoHeaderContainer = styled.div`
 
   span {
     display: flex;
-    align-items: baseline;
-    gap: 0.5rem;
-    height: 5.5rem;
+    flex-direction: column;
+    text-align: left;
+    @media screen and (min-width: 768px){
+      gap: 0.5rem;
+      height: 5.5rem;
+      align-items: baseline;
+      flex-direction: row;
+  }
 
     h1 {
       font-style: italic;
-      margin: 0 0.75rem;
+      height: 4.5rem;
+      margin: 0;
+      @media screen and (min-width: 768px){
+        margin: 0 0.75rem;
+    }
     }
 
     h2 {
@@ -178,6 +190,18 @@ export const InfoWrapper = styled.div`
 export const InfoContainer = styled.div`
   display: flex;
   flex-direction: row;
+
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    position: relative;
+    align-items: center;
+    z-index: 1;
+  }
+
 `;
 
 export const TextContainer = styled.div`
@@ -203,6 +227,10 @@ export const GuaranteesContainer = styled.div`
     flex-direction: column;
     margin: 0;
     gap: 1.25rem;
+    padding: 0;
+    @media screen and (min-width: 768px){
+      padding-left: 2.5rem;
+    }
   }
 
   li {

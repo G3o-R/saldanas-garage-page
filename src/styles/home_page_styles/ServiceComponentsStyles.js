@@ -17,10 +17,15 @@ export const ServiceContainer = styled.div`
 export const ServiceNameContainer = styled.div`
   h2 {
     margin: 0;
+    line-height: 3rem;
   }
 `;
 
 export const ServiceDescription = styled.div`
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  display: contents;
   text-align: left;
   p {
     max-width: 14.75rem;

@@ -15,8 +15,8 @@ export function Tints() {
           </ServiceNameContainer>
           <ServiceDescription className="service-description">
             <p>custom tints keep your car cool even when it’s hot as hell...</p>
-          </ServiceDescription>
           <Flourish />
+          </ServiceDescription>
 
         </ServiceContainer>
       </ServiceWrapper>
@@ -32,8 +32,8 @@ export function Wraps() {
           </ServiceNameContainer>
           <ServiceDescription className="service-description">
             <p>Blah blah something here make your car look brand new.</p>
-          </ServiceDescription>
           <Flourish />
+          </ServiceDescription>
 
         </ServiceContainer>
       </ServiceWrapper>
@@ -49,8 +49,8 @@ export function Decals() {
           </ServiceNameContainer>
           <ServiceDescription className="service-description">
             <p>Promotions, racing stripes, hello kitty, stickers we do it al.l</p>
-          </ServiceDescription>
           <Flourish />
+          </ServiceDescription>
 
         </ServiceContainer>
       </ServiceWrapper>
@@ -66,8 +66,8 @@ export function LEDS() {
           </ServiceNameContainer>
           <ServiceDescription className="service-description">
             <p>We make you shine bright like a diamond fr fr.</p>
-          </ServiceDescription>
           <Flourish />
+          </ServiceDescription>
 
         </ServiceContainer>
       </ServiceWrapper>
