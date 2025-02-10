@@ -45,6 +45,8 @@ export const LogoContainer = styled.div`
     height: 100%;
     border-radius: 50%;
   }
+
+  
 `;
 
 export const InfoWrapper = styled.div`
@@ -57,9 +59,23 @@ export const InfoWrapper = styled.div`
 
 export const InfoContainer = styled.div`
   text-align: left;
+  a {
+    color: #999999;
+    text-decoration: none;
+    font-weight: normal;
+    cursor: pointer;
+
+    &:hover {
+      color: #ffffff;
+    }
+  }
 `;
 
 export const SocialMediaContainer = styled.div`
   display: flex;
   gap: 1rem;
+`;
+
+export const SocialMediaIconAnchor = styled.a`
+    cursor: pointer;
 `;
