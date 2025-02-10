@@ -10,6 +10,7 @@ import {
 import SGLogo from "../../images/saldanas-garage-logo.jpg";
 import LuisPNGL from "../../images/luis-cut-out-large.png";
 import LuisPNGM from "../../images/luis-cut-out-med.png";
+import VideoPlayer from "./VideoPlayer";
 
 export default function Hero() {
   // under 1080px I need the ImageWrapper OR TextWrapper to have a negative
@@ -30,6 +31,7 @@ export default function Hero() {
             <img src={LuisPNGM} alt="png of saldana's garage over" />
           </ImageContainer>
         </ImageWrapper>
+        {/* <VideoPlayer /> */}
       </HeroContainer>
     </HeroSection>
   );
