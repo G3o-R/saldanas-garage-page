@@ -13,12 +13,15 @@ export const StyledCTASection = styled.section`
 export const CTAWrapper = styled.div`
   width: 100%;
   max-width: 50rem;
-  margin: 0rem 1rem;
 
-  @media screen and (min-width: 768px){
+  @media screen and (max-width: 767px) {
+    padding-left: clamp(1rem, 20vw, 8.25rem);
+  }
+
+  @media screen and (min-width: 768px) {
     max-height: 31.25rem;
   }
-  
+
   @media screen and (min-width: 1080px) {
     max-width: 63rem;
   }
@@ -42,19 +45,19 @@ export const CallToAction = styled.div`
   flex-direction: column;
   justify-content: center;
   height: 100%;
-  @media screen and (min-width:768px){
+  @media screen and (min-width: 768px) {
     margin-bottom: 8rem;
   }
-  
+
   @media screen and (min-width: 1080px) {
     margin-bottom: 5rem;
   }
-  
+
   h1 {
     color: white;
     text-align: left;
     line-height: 4rem;
-    margin: 2rem .75rem 0rem;
+    margin: 2rem 0.75rem 0rem;
     max-width: 53.125rem;
     @media screen and (min-width: 768px) {
       line-height: 1.2;
@@ -71,8 +74,8 @@ export const BookNowContainer = styled.div`
   height: 5.375rem;
   width: 12.5rem;
   transition: transform 0.3s ease-in-out;
-  
-  @media screen and (min-width: 768px){
+
+  @media screen and (min-width: 768px) {
     margin-top: 1.5rem;
     height: 4rem;
     width: 14rem;
@@ -96,18 +99,14 @@ export const ImageContainer = styled.div`
   margin-top: -2.5rem;
 
   @media screen and (min-width: 420px) {
-    margin-top: -3.5rem;
-  }
-
-  @media screen and (min-width: 460px) {
-    margin-top: -4.5rem;
+    margin-top: -2.75rem;
   }
 
   @media screen and (min-width: 540px) {
-    margin-top: -5.5rem;
+    margin-top: -3.5rem;
   }
-  
-  @media screen and (min-width: 768px){
+
+  @media screen and (min-width: 768px) {
     position: absolute;
     bottom: 0;
     right: 0;
