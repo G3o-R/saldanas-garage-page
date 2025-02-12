@@ -1,9 +1,10 @@
 import { HomePage } from "../../styles/home_page_styles/HomeStyles";
 import Content from "../sections/Content";
-import Hero from "../sections/Hero";
-import InstagramDisplay from "../sections/InstagramDisplay";
+// import Hero from "../sections/Hero";
+// import InstagramDisplay from "../sections/InstagramDisplay";
 import Footer from "../sections/Footer";
 import HeroVideo from "../sections/HeroVideo";
+import CTA from "../sections/CTA";
 
 
 export default function Home(){
@@ -12,7 +13,8 @@ export default function Home(){
             {/* <Hero /> */}
             <HeroVideo />
             <Content />
-            <InstagramDisplay />
+            {/* <InstagramDisplay /> */}
+            <CTA />
             <Footer />
         </HomePage>
     )

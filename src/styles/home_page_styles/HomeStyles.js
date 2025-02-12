@@ -9,7 +9,11 @@ h1{
     color: #ffffff;
     height: 100%;
 
-    font-size: 4.375rem;
+    font-size: 3.5rem;
+    @media screen and (min-width:768px){
+        font-size: 4.375rem;
+    }
+
     @media screen and (min-width: 1080px){
         font-size:  5.75rem;
     }
