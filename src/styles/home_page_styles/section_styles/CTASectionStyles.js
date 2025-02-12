@@ -70,8 +70,7 @@ export const BookNowContainer = styled.div`
   border-radius: 50px;
   height: 5.375rem;
   width: 12.5rem;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
   
   @media screen and (min-width: 768px){
     margin-top: 1.5rem;
@@ -81,7 +80,6 @@ export const BookNowContainer = styled.div`
 
   &:hover {
     transform: scale(1.05);
-    box-shadow: 0px 6px 14px rgba(255, 255, 255, 0.2);
   }
 
   a {
