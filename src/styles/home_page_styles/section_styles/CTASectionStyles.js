@@ -45,16 +45,16 @@ export const CallToAction = styled.div`
   @media screen and (min-width:768px){
     margin-bottom: 8rem;
   }
-
+  
   @media screen and (min-width: 1080px) {
     margin-bottom: 5rem;
   }
-
+  
   h1 {
     color: white;
     text-align: left;
     line-height: 4rem;
-    margin: 2rem 0 0rem;
+    margin: 2rem .75rem 0rem;
     max-width: 53.125rem;
     @media screen and (min-width: 768px) {
       line-height: 1.2;
