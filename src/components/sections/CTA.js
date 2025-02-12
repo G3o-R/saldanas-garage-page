@@ -9,7 +9,7 @@ export default function CTA(){
                     <CallToAction>
                         <h1>Keeping your car cool and you looking cooler</h1>
                         <BookNowContainer>
-                            <a>Book Now</a>
+                            <a href="tel:+16023492192">Book Now</a>
                         </BookNowContainer>
                     </CallToAction>
                     <ImageContainer className="image-container">

@@ -22,8 +22,6 @@ import {
   Decals,
   LEDS,
 } from "../ServiceComponents";
-import SilverRibbons from "../../images/content-section-silver-ribbon.jpg";
-import SilverRibbonsM from "../../images/silver-ribbons-M.jpg";
 import SilverRibbonsWLogo from "../../images/silver-ribbons-L-w-logo.jpg"
 import SilverRibbonsMedWLogo from "../../images/silver-ribbons-M-w-logo.jpg"
 import Scratches from "../../images/content-section-scratch-marks.jpg";
