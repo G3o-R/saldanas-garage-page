@@ -4,7 +4,6 @@ export const FooterSection = styled.section`
   background-color: #000;
   display: flex;
   justify-content: center;
-  padding: 1.5rem .5rem;
   
   @media screen and (min-width: 668px) {
     height: 31.25rem;
