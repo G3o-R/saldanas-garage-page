@@ -48,7 +48,6 @@ export const ServiceDescription = styled.div`
   display: contents;
   p {
     max-width: 14.75rem;
-    left: calc(50% - 237px / 2 + 0.5px);
     line-height: 1.75rem;
     letter-spacing: -0.07em;
     margin-top: 0;
