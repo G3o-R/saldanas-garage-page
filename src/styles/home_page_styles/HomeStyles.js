@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const HomePage = styled.div`
-overflow: hidden;
+overflow-x: hidden;
 
 
 h1{
