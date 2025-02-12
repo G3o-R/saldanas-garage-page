@@ -10,9 +10,9 @@ import CTA from "../sections/CTA";
 export default function Home(){
     return(
         <HomePage>
-            <HeroVideo />
-            <Content />
-            {/* <CTA /> */}
+            {/* <HeroVideo /> */}
+            {/* <Content /> */}
+            <CTA />
             <Footer />
         </HomePage>
     )
