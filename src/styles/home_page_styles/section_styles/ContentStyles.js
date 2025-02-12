@@ -80,7 +80,7 @@ export const ServiceGridWrapper = styled.div`
   justify-content: flex-end;
   align-items: right;
   @media screen and (max-width: 767px) {
-  padding-left: clamp(1rem, 20vw, 5.25rem);
+  padding-left: clamp(1rem, 20vw, 8.25rem);
 }
 `;
 
@@ -131,7 +131,7 @@ export const ServiceInfoWrapper = styled.div`
   padding: 0 1.25rem;
   /* justify-content: center; */
   @media screen and (max-width: 767px) {
-  padding-left: clamp(1rem, 20vw, 5.25rem);
+  padding-left: clamp(1rem, 20vw, 8.25rem);
 }
 
 

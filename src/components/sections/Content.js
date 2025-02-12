@@ -24,6 +24,8 @@ import {
 } from "../ServiceComponents";
 import SilverRibbons from "../../images/content-section-silver-ribbon.jpg";
 import SilverRibbonsM from "../../images/silver-ribbons-M.jpg";
+import SilverRibbonsWLogo from "../../images/silver-ribbons-L-w-logo.jpg"
+import SilverRibbonsMedWLogo from "../../images/silver-ribbons-M-w-logo.jpg"
 import Scratches from "../../images/content-section-scratch-marks.jpg";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -114,12 +116,12 @@ export default function Content() {
       <BackgroundWrapper className="background">
         <BackgroundContainer>
           <img
-            src={SilverRibbons}
+            src={SilverRibbonsWLogo}
             alt="background image of ribbons"
             className="ribbons-large"
           />
           <img
-            src={SilverRibbonsM}
+            src={SilverRibbonsMedWLogo}
             alt="background image of ribbons"
             className="ribbons-medium"
           />
