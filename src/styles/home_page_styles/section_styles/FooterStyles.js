@@ -68,6 +68,12 @@ export const InfoContainer = styled.div`
       color: #ffffff;
     }
   }
+  h2{
+    margin: 0.75rem 0;
+  }
+  p{
+    margin: 0.25rem 0;
+  }
 `;
 
 export const SocialMediaContainer = styled.div`
@@ -77,4 +83,7 @@ export const SocialMediaContainer = styled.div`
 
 export const SocialMediaIconAnchor = styled.a`
     cursor: pointer;
+    svg{
+      width: 3.125rem;
+    }
 `;

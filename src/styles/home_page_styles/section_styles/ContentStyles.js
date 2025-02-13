@@ -181,6 +181,7 @@ export const InfoHeaderContainer = styled.div`
     display: flex;
     flex-direction: column;
     text-align: left;
+    margin-top: .75rem;
     @media screen and (min-width: 768px) {
       gap: 0.5rem;
       height: 5.5rem;
@@ -190,7 +191,7 @@ export const InfoHeaderContainer = styled.div`
 
     h1 {
       font-style: italic;
-      height: 4.5rem;
+      height: 3rem;
       margin: 0;
       @media screen and (min-width: 768px) {
         margin: 0 0.75rem;
@@ -302,7 +303,6 @@ export const NavButton = styled.button`
   height: 50px;
   width: 50px;
   background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(3.4px);
   &::after {
     color: #c2c2c2;
     font-size: 1.5rem;
